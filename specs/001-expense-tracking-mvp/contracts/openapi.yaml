@@ -1,0 +1,649 @@
+openapi: 3.1.0
+info:
+  title: Expense Tracker API
+  version: 1.0.0
+  description: |
+    REST API for the Expense Tracking MVP. Authentication is JWT bearer.
+    Authorization is policy-based (role + resource ownership).
+servers:
+  - url: /api/v1
+    description: Default base URL
+
+tags:
+  - name: Auth
+  - name: Entries
+  - name: Months
+  - name: Dashboard
+  - name: Categories
+  - name: Currencies
+  - name: Admin
+  - name: Health
+
+security:
+  - bearerAuth: []
+
+paths:
+  /health:
+    get:
+      tags: [Health]
+      summary: Liveness probe
+      security: []
+      responses:
+        "200":
+          description: OK
+
+  /auth/register:
+    post:
+      tags: [Auth]
+      summary: Register a new user
+      security: []
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [firstName, lastName, email, phoneNumber, password, currencyCode]
+              properties:
+                firstName: { type: string, minLength: 1, maxLength: 50 }
+                lastName: { type: string, minLength: 1, maxLength: 50 }
+                email: { type: string, format: email, maxLength: 254 }
+                phoneNumber: { type: string, pattern: "^\\+?[0-9]{7,15}$" }
+                password: { type: string, minLength: 8, maxLength: 100 }
+                currencyCode: { type: string, minLength: 3, maxLength: 3 }
+                timezone: { type: string, default: UTC }
+                photo:
+                  type: string
+                  format: binary
+                  description: "Optional. JPEG/PNG, max 2 MB, max 2048x2048."
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/AuthResult" }
+        "400": { $ref: "#/components/responses/Problem" }
+        "409":
+          description: Email or phone already in use
+          content:
+            application/problem+json:
+              schema: { $ref: "#/components/schemas/Problem" }
+
+  /auth/login:
+    post:
+      tags: [Auth]
+      summary: Log in with email or phone + password
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [identifier, password]
+              properties:
+                identifier:
+                  type: string
+                  description: "Email or phone number."
+                password: { type: string }
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/AuthResult" }
+        "401": { $ref: "#/components/responses/Problem" }
+        "429": { $ref: "#/components/responses/Problem" }
+
+  /auth/refresh:
+    post:
+      tags: [Auth]
+      summary: Rotate refresh token, get new access token
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [refreshToken]
+              properties:
+                refreshToken: { type: string }
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/AuthResult" }
+        "401": { $ref: "#/components/responses/Problem" }
+
+  /auth/logout:
+    post:
+      tags: [Auth]
+      summary: Revoke current refresh token
+      responses:
+        "204": { description: No Content }
+
+  /me:
+    get:
+      tags: [Auth]
+      summary: Get the authenticated user's profile
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/UserProfile" }
+    patch:
+      tags: [Auth]
+      summary: Update own profile (name, currency, timezone)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                firstName: { type: string }
+                lastName: { type: string }
+                currencyCode: { type: string, minLength: 3, maxLength: 3 }
+                timezone: { type: string }
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/UserProfile" }
+        "400": { $ref: "#/components/responses/Problem" }
+
+  /me/photo:
+    put:
+      tags: [Auth]
+      summary: Upload or replace own profile photo
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [photo]
+              properties:
+                photo: { type: string, format: binary }
+      responses:
+        "204": { description: No Content }
+        "400": { $ref: "#/components/responses/Problem" }
+    delete:
+      tags: [Auth]
+      summary: Remove own profile photo
+      responses:
+        "204": { description: No Content }
+  /users/{userId}/photo:
+    get:
+      tags: [Auth]
+      summary: Fetch a user's photo (self or admin)
+      parameters:
+        - { name: userId, in: path, required: true, schema: { type: string, format: uuid } }
+      responses:
+        "200":
+          description: OK
+          content:
+            image/jpeg: {}
+            image/png: {}
+        "404": { $ref: "#/components/responses/Problem" }
+
+  /entries:
+    post:
+      tags: [Entries]
+      summary: Create an expense or income entry
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/EntryCreate" }
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Entry" }
+        "400": { $ref: "#/components/responses/Problem" }
+
+  /entries/{entryId}:
+    get:
+      tags: [Entries]
+      parameters: [{ $ref: "#/components/parameters/EntryId" }]
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Entry" }
+        "403": { $ref: "#/components/responses/Problem" }
+        "404": { $ref: "#/components/responses/Problem" }
+    put:
+      tags: [Entries]
+      parameters: [{ $ref: "#/components/parameters/EntryId" }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/EntryUpdate" }
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Entry" }
+        "400": { $ref: "#/components/responses/Problem" }
+        "403": { $ref: "#/components/responses/Problem" }
+    delete:
+      tags: [Entries]
+      parameters: [{ $ref: "#/components/parameters/EntryId" }]
+      responses:
+        "204": { description: No Content }
+        "403": { $ref: "#/components/responses/Problem" }
+
+  /months/{year}/{month}:
+    get:
+      tags: [Months]
+      summary: Get monthly view (entries + totals + opening/closing balance + status color)
+      parameters:
+        - { name: year, in: path, required: true, schema: { type: integer, minimum: 1900, maximum: 9999 } }
+        - { name: month, in: path, required: true, schema: { type: integer, minimum: 1, maximum: 12 } }
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/MonthlyView" }
+
+  /dashboard:
+    get:
+      tags: [Dashboard]
+      summary: Dashboard data (current month status + per-month trend)
+      parameters:
+        - { name: monthsBack, in: query, schema: { type: integer, minimum: 1, maximum: 24, default: 12 } }
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Dashboard" }
+
+  /categories:
+    get:
+      tags: [Categories]
+      summary: List active categories visible to the user
+      parameters:
+        - { name: type, in: query, schema: { type: string, enum: [Expense, Income] } }
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/Category" }
+
+  /admin/categories:
+    post:
+      tags: [Admin, Categories]
+      summary: Create category (Admin)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/CategoryCreate" }
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Category" }
+        "403": { $ref: "#/components/responses/Problem" }
+  /admin/categories/{categoryId}:
+    put:
+      tags: [Admin, Categories]
+      parameters: [{ name: categoryId, in: path, required: true, schema: { type: string, format: uuid } }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/CategoryUpdate" }
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Category" }
+    delete:
+      tags: [Admin, Categories]
+      parameters: [{ name: categoryId, in: path, required: true, schema: { type: string, format: uuid } }]
+      responses:
+        "204": { description: No Content (soft-deleted) }
+
+  /currencies/active:
+    get:
+      tags: [Currencies]
+      summary: List active currencies (anonymous; used by registration)
+      security: []
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/Currency" }
+
+  /admin/currencies:
+    post:
+      tags: [Admin, Currencies]
+      summary: Add supported currency (Admin)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/CurrencyCreate" }
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Currency" }
+        "403": { $ref: "#/components/responses/Problem" }
+  /admin/currencies/{code}:
+    put:
+      tags: [Admin, Currencies]
+      parameters: [{ name: code, in: path, required: true, schema: { type: string, minLength: 3, maxLength: 3 } }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/CurrencyUpdate" }
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Currency" }
+    delete:
+      tags: [Admin, Currencies]
+      parameters: [{ name: code, in: path, required: true, schema: { type: string } }]
+      responses:
+        "204": { description: No Content (deactivated) }
+
+  /admin/users:
+    get:
+      tags: [Admin]
+      summary: List users (Admin)
+      parameters:
+        - { name: page, in: query, schema: { type: integer, minimum: 1, default: 1 } }
+        - { name: pageSize, in: query, schema: { type: integer, minimum: 1, maximum: 100, default: 20 } }
+        - { name: q, in: query, schema: { type: string }, description: "Search by name/email/phone" }
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/UserPage" }
+        "403": { $ref: "#/components/responses/Problem" }
+  /admin/users/{userId}:
+    get:
+      tags: [Admin]
+      parameters: [{ name: userId, in: path, required: true, schema: { type: string, format: uuid } }]
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/UserProfile" }
+    patch:
+      tags: [Admin]
+      parameters: [{ name: userId, in: path, required: true, schema: { type: string, format: uuid } }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/AdminUserUpdate" }
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/UserProfile" }
+    delete:
+      tags: [Admin]
+      parameters:
+        - { name: userId, in: path, required: true, schema: { type: string, format: uuid } }
+        - { name: hard, in: query, schema: { type: boolean, default: false } }
+      responses:
+        "204": { description: No Content }
+        "409": { $ref: "#/components/responses/Problem" }
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  parameters:
+    EntryId:
+      name: entryId
+      in: path
+      required: true
+      schema: { type: string, format: uuid }
+
+  responses:
+    Problem:
+      description: Problem details
+      content:
+        application/problem+json:
+          schema: { $ref: "#/components/schemas/Problem" }
+
+  schemas:
+    Problem:
+      type: object
+      properties:
+        type: { type: string }
+        title: { type: string }
+        status: { type: integer }
+        detail: { type: string }
+        instance: { type: string }
+        code:
+          type: string
+          description: Application-specific error code (e.g. future_month_write_forbidden)
+        errors:
+          type: object
+          additionalProperties:
+            type: array
+            items: { type: string }
+      required: [title, status]
+
+    AuthResult:
+      type: object
+      required: [accessToken, refreshToken, expiresAt, user]
+      properties:
+        accessToken: { type: string }
+        refreshToken: { type: string }
+        expiresAt: { type: string, format: date-time }
+        user: { $ref: "#/components/schemas/UserProfile" }
+
+    UserProfile:
+      type: object
+      required: [id, firstName, lastName, email, phoneNumber, role, currencyCode, timezone]
+      properties:
+        id: { type: string, format: uuid }
+        firstName: { type: string }
+        lastName: { type: string }
+        email: { type: string, format: email }
+        phoneNumber: { type: string }
+        role: { type: string, enum: [User, Admin] }
+        currencyCode: { type: string }
+        timezone: { type: string }
+        hasPhoto: { type: boolean }
+        createdAt: { type: string, format: date-time }
+
+    AdminUserUpdate:
+      type: object
+      properties:
+        firstName: { type: string }
+        lastName: { type: string }
+        email: { type: string, format: email }
+        phoneNumber: { type: string }
+        role: { type: string, enum: [User, Admin] }
+        currencyCode: { type: string }
+        timezone: { type: string }
+
+    UserPage:
+      type: object
+      required: [items, total, page, pageSize]
+      properties:
+        items:
+          type: array
+          items: { $ref: "#/components/schemas/UserProfile" }
+        total: { type: integer }
+        page: { type: integer }
+        pageSize: { type: integer }
+
+    Currency:
+      type: object
+      required: [code, symbol, decimalPlaces, isActive]
+      properties:
+        code: { type: string }
+        symbol: { type: string }
+        decimalPlaces: { type: integer }
+        isActive: { type: boolean }
+
+    CurrencyCreate:
+      type: object
+      required: [code, symbol, decimalPlaces]
+      properties:
+        code: { type: string, minLength: 3, maxLength: 3 }
+        symbol: { type: string, maxLength: 8 }
+        decimalPlaces: { type: integer, minimum: 0, maximum: 4 }
+
+    CurrencyUpdate:
+      type: object
+      properties:
+        symbol: { type: string }
+        decimalPlaces: { type: integer, minimum: 0, maximum: 4 }
+        isActive: { type: boolean }
+
+    Category:
+      type: object
+      required: [id, name, type, isActive]
+      properties:
+        id: { type: string, format: uuid }
+        name: { type: string }
+        type: { type: string, enum: [Expense, Income] }
+        isActive: { type: boolean }
+
+    CategoryCreate:
+      type: object
+      required: [name, type]
+      properties:
+        name: { type: string, maxLength: 50 }
+        type: { type: string, enum: [Expense, Income] }
+
+    CategoryUpdate:
+      type: object
+      properties:
+        name: { type: string, maxLength: 50 }
+        isActive: { type: boolean }
+
+    EntryCreate:
+      type: object
+      required: [type, amount, date]
+      properties:
+        type: { type: string, enum: [Expense, Income] }
+        amount: { type: number, exclusiveMinimum: 0 }
+        date: { type: string, format: date }
+        categoryId:
+          type: string
+          format: uuid
+          nullable: true
+          description: "Either categoryId or freeTextCategory must be provided."
+        freeTextCategory:
+          type: string
+          maxLength: 50
+          nullable: true
+        note: { type: string, maxLength: 500, nullable: true }
+
+    EntryUpdate:
+      allOf:
+        - $ref: "#/components/schemas/EntryCreate"
+
+    Entry:
+      type: object
+      required: [id, type, amount, date, categoryName, currencyCode]
+      properties:
+        id: { type: string, format: uuid }
+        type: { type: string, enum: [Expense, Income] }
+        amount: { type: number }
+        date: { type: string, format: date }
+        categoryId: { type: string, format: uuid, nullable: true }
+        categoryName:
+          type: string
+          description: "Linked category snapshot, or the free-text label."
+        note: { type: string, nullable: true }
+        currencyCode: { type: string }
+        createdAt: { type: string, format: date-time }
+        updatedAt: { type: string, format: date-time }
+
+    MonthlyView:
+      type: object
+      required:
+        - year
+        - month
+        - openingBalance
+        - totalIncome
+        - totalExpense
+        - savings
+        - savingsRatePct
+        - statusColor
+        - readOnly
+        - entries
+        - currencyCode
+      properties:
+        year: { type: integer }
+        month: { type: integer }
+        openingBalance: { type: number }
+        totalIncome: { type: number }
+        totalExpense: { type: number }
+        savings: { type: number, description: "totalIncome - totalExpense" }
+        closingBalance: { type: number }
+        savingsRatePct:
+          type: number
+          nullable: true
+          description: "Null when totalIncome = 0; treated as < 10% (BloodRed)."
+        statusColor: { type: string, enum: [Green, Orange, OrangeRedTint, BloodRed] }
+        readOnly:
+          type: boolean
+          description: "True for future months."
+        currencyCode: { type: string }
+        entries:
+          type: array
+          items: { $ref: "#/components/schemas/Entry" }
+
+    DashboardMonthPoint:
+      type: object
+      required: [year, month, totalIncome, totalExpense, savingsRatePct, statusColor]
+      properties:
+        year: { type: integer }
+        month: { type: integer }
+        totalIncome: { type: number }
+        totalExpense: { type: number }
+        savingsRatePct: { type: number, nullable: true }
+        statusColor: { type: string, enum: [Green, Orange, OrangeRedTint, BloodRed] }
+
+    Dashboard:
+      type: object
+      required: [currentMonth, trend, alertExpenseExceedsIncome]
+      properties:
+        currentMonth: { $ref: "#/components/schemas/MonthlyView" }
+        trend:
+          type: array
+          items: { $ref: "#/components/schemas/DashboardMonthPoint" }
+        alertExpenseExceedsIncome: { type: boolean }
