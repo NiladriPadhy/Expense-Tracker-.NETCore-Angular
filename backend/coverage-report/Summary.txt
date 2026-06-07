@@ -1,0 +1,72 @@
+Summary
+  Generated on: 05/06/2026 - 2:33:59 AM
+  Coverage date: 05/06/2026 - 2:33:55 AM - 05/06/2026 - 2:33:59 AM
+  Parser: MultiReport (2x Cobertura)
+  Assemblies: 2
+  Classes: 48
+  Files: 26
+  Line coverage: 70.5%
+  Covered lines: 452
+  Uncovered lines: 189
+  Coverable lines: 641
+  Total lines: 1898
+  Branch coverage: 67.7% (82 of 121)
+  Covered branches: 82
+  Total branches: 121
+  Method coverage: 60.3% (67 of 111)
+  Full method coverage: 45% (50 of 111)
+  Covered methods: 67
+  Fully covered methods: 50
+  Total methods: 111
+
+ExpenseTracker.Application                                                70.5%
+  ExpenseTracker.Application.Admin.Categories.CreateCategoryHandler        100%
+  ExpenseTracker.Application.Admin.Categories.DeactivateCategoryHandler    100%
+  ExpenseTracker.Application.Admin.Categories.UpdateCategoryHandler        100%
+  ExpenseTracker.Application.Admin.Currencies.CreateCurrencyHandler          0%
+  ExpenseTracker.Application.Admin.Currencies.DeactivateCurrencyHandler      0%
+  ExpenseTracker.Application.Admin.Currencies.UpdateCurrencyHandler          0%
+  ExpenseTracker.Application.Admin.Users.DeleteUserHandler                   0%
+  ExpenseTracker.Application.Admin.Users.GetUserHandler                      0%
+  ExpenseTracker.Application.Admin.Users.ListUsersHandler                    0%
+  ExpenseTracker.Application.Admin.Users.UpdateUserHandler                   0%
+  ExpenseTracker.Application.Auth.LoginUserHandler                         100%
+  ExpenseTracker.Application.Auth.LogoutHandler                            100%
+  ExpenseTracker.Application.Auth.RefreshTokenHandler                      100%
+  ExpenseTracker.Application.Auth.RegisterUserHandler                      100%
+  ExpenseTracker.Application.Auth.Validators.LoginValidator                  0%
+  ExpenseTracker.Application.Auth.Validators.RegisterUserValidator           0%
+  ExpenseTracker.Application.Common.AppException                           100%
+  ExpenseTracker.Application.Common.ConflictException                      100%
+  ExpenseTracker.Application.Common.ForbiddenException                     100%
+  ExpenseTracker.Application.Common.NotFoundException                      100%
+  ExpenseTracker.Application.Common.Result                                   0%
+  ExpenseTracker.Application.Common.Result<T>                                0%
+  ExpenseTracker.Application.Common.UnauthorizedException                  100%
+  ExpenseTracker.Application.Common.ValidationAppException                   0%
+  ExpenseTracker.Application.Dashboard.GetDashboardHandler                   0%
+  ExpenseTracker.Application.Entries.CreateEntryHandler                    100%
+  ExpenseTracker.Application.Entries.DeleteEntryHandler                    100%
+  ExpenseTracker.Application.Entries.EntryMapper                           100%
+  ExpenseTracker.Application.Entries.GetEntryHandler                         0%
+  ExpenseTracker.Application.Entries.ListEntriesByMonthHandler             100%
+  ExpenseTracker.Application.Entries.UpdateEntryHandler                    100%
+  ExpenseTracker.Application.Entries.Validators.EntryCreateValidator         0%
+  ExpenseTracker.Application.Entries.Validators.EntryUpdateValidator         0%
+  ExpenseTracker.Application.Months.GetMonthlyViewHandler                    0%
+
+ExpenseTracker.Domain                                                     70.4%
+  ExpenseTracker.Domain.Entities.Category                                 86.6%
+  ExpenseTracker.Domain.Entities.Currency                                   50%
+  ExpenseTracker.Domain.Entities.Entry                                    67.1%
+  ExpenseTracker.Domain.Entities.MonthlySummary                            100%
+  ExpenseTracker.Domain.Entities.RefreshToken                             88.2%
+  ExpenseTracker.Domain.Entities.User                                     87.6%
+  ExpenseTracker.Domain.Entities.UserProfilePhoto                            0%
+  ExpenseTracker.Domain.Services.CarryForwardCalculator                    100%
+  ExpenseTracker.Domain.Services.MonthlySummaryService                     100%
+  ExpenseTracker.Domain.Services.SavingsRateClassifier                     100%
+  ExpenseTracker.Domain.ValueObjects.EmailAddress                         47.3%
+  ExpenseTracker.Domain.ValueObjects.Money                                   0%
+  ExpenseTracker.Domain.ValueObjects.MonthYear                            66.6%
+  ExpenseTracker.Domain.ValueObjects.PhoneNumber                          52.3%

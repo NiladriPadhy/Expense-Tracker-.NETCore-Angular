@@ -44,11 +44,13 @@ Default `appsettings.Development.json` already sets `Database:Provider=Sqlite` a
 
 ```bash
 cd backend/src/ExpenseTracker.Api
-dotnet ef database update --project ../ExpenseTracker.Infrastructure
-dotnet run
+ASPNETCORE_ENVIRONMENT=Development \
+  dotnet run --no-launch-profile --urls http://localhost:5266
 ```
 
-The API listens on `https://localhost:5001` (or configured port). Swagger UI is at `/swagger`. The health probe is `GET /api/v1/health`.
+The API listens on `http://localhost:5266`. Swagger UI is at `/swagger`. The
+health probe is `GET /health`. Migrations and seed data are applied automatically
+on startup by `SeedRunner` (no manual `dotnet ef database update` step needed).
 
 On first run the API seeds:
 - Currencies: INR, USD, EUR, GBP, JPY
@@ -63,16 +65,22 @@ cd frontend
 npm start
 ```
 
-The SPA serves at `http://localhost:4200` and is configured to call the API at `https://localhost:5001/api/v1` (configurable in `src/app/infrastructure/config/api.config.ts`).
+The SPA serves at `http://127.0.0.1:4200` and is configured to call the API at
+`http://localhost:5266/api/v1` (see
+`frontend/src/app/infrastructure/config/api.config.ts`).
 
 ---
 
 ## 5) Acceptance walkthrough (matches spec User Stories 1–5)
 
 ### US-1: Register & log in
-1. Visit `http://localhost:4200/register`.
-2. Submit first/last name, **unique** email and phone, password (≥ 8 chars), and pick a currency (e.g. `USD`). Photo is optional.
-3. Verify redirect to `/login`, then sign in with email **or** phone + password. Confirm the JWT lands in storage and the Monthly View opens for the current month.
+1. Visit `http://127.0.0.1:4200/register`.
+2. Submit full name, **unique** email, E.164 phone (e.g. `+15558675309`),
+   password (≥ 8 chars including a letter and a digit), and pick a currency
+   (e.g. `USD`). Photo is optional.
+3. After register the SPA is immediately authenticated and lands on the
+   Monthly View. Logging out and back in via `/login` accepts either email or
+   phone in the `identifier` field.
 
 ### US-2: Record entries
 1. On the Monthly View, click **Add Expense** for today. Pick a category (e.g. *Food*) and an amount.
@@ -146,8 +154,27 @@ No source changes outside the composition root are required.
 
 ## 8) Troubleshooting
 
+- **Backend exits with `Jwt:SigningKey is set to the development default`** —
+  start the API with `ASPNETCORE_ENVIRONMENT=Development` (the default for
+  `dotnet run` is Production). For non-Development envs, export
+  `Jwt__SigningKey` or set it in user-secrets.
 - **`401 Unauthorized` on every API call** — verify the JWT signing key is set; the dev SPA only stores tokens for the current browser session.
-- **`SQLite Error 1: 'no such table: Users'`** — migrations not applied; re-run step 3.
-- **CORS error in browser** — confirm `Cors:AllowedOrigins` in `appsettings.Development.json` includes `http://localhost:4200`.
+- **`SQLite Error 1: 'no such table: Users'`** — the `SeedRunner` failed to
+  apply migrations on startup; check the API console for the underlying error.
+- **CORS error in browser** — by default `Cors:AllowedOrigins` is empty and the API allows any origin (dev convenience). For Production, set `Cors:AllowedOrigins` to an explicit list (e.g. `["https://app.example.com"]`).
 - **Photo upload `400`** — file must be JPEG/PNG, ≤ 2 MB, ≤ 2048×2048.
 - **Cannot demote/delete last admin** — by design (FR-025); promote another user first.
+
+### Verified end-to-end (2026-06-05)
+
+A scripted curl walkthrough against the running API confirmed:
+
+| User Story | Result |
+|---|---|
+| US-1 register + login (email or phone) | ✓ |
+| US-2 create expense / income with free-text category snapshot | ✓ |
+| US-3 current month totals + status color | ✓ |
+| US-3 future month read-only with projected `openingBalance` | ✓ |
+| Future-month write rejection (`400 future_month_write_forbidden`) | ✓ |
+| US-4 carry-forward (`m+1.openingBalance == m.closingBalance`) | ✓ |
+| US-5 `/dashboard?monthsBack=3` returns `currentMonthStatusColor` + `trend[]` | ✓ |

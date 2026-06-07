@@ -1,0 +1,2031 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage line-rate="0.7051482059282371" branch-rate="0.6776859504132231" lines-covered="452" lines-valid="641" branches-covered="82" branches-valid="121" complexity="206" version="0" timestamp="1780626839">
+  <sources>
+    <source></source>
+  </sources>
+  <packages>
+    <package name="ExpenseTracker.Application" line-rate="0.7056451612903226" branch-rate="0.6" complexity="56">
+      <classes>
+        <class name="ExpenseTracker.Application.Admin.Categories.CreateCategoryHandler" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Admin/Categories/CategoryHandlers.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(ExpenseTracker.Domain.Abstractions.ICategoryRepository,ExpenseTracker.Domain.Abstractions.IUnitOfWork,ExpenseTracker.Domain.Abstractions.IClock)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="10" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="18" hits="10" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Admin.Categories.DeactivateCategoryHandler" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Admin/Categories/CategoryHandlers.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(ExpenseTracker.Domain.Abstractions.ICategoryRepository,ExpenseTracker.Domain.Abstractions.IUnitOfWork,ExpenseTracker.Domain.Abstractions.IClock)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="69" hits="10" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="69" hits="10" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Admin.Categories.UpdateCategoryHandler" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Admin/Categories/CategoryHandlers.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(ExpenseTracker.Domain.Abstractions.ICategoryRepository,ExpenseTracker.Domain.Abstractions.IUnitOfWork,ExpenseTracker.Domain.Abstractions.IClock)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="39" hits="20" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="39" hits="20" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Admin.Currencies.CreateCurrencyHandler" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Admin/Currencies/CurrencyHandlers.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(ExpenseTracker.Domain.Abstractions.ICurrencyRepository,ExpenseTracker.Domain.Abstractions.IUnitOfWork,ExpenseTracker.Domain.Abstractions.IClock)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="17" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Admin.Currencies.DeactivateCurrencyHandler" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Admin/Currencies/CurrencyHandlers.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(ExpenseTracker.Domain.Abstractions.ICurrencyRepository,ExpenseTracker.Domain.Abstractions.IUnitOfWork,ExpenseTracker.Domain.Abstractions.IClock)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="62" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="62" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Admin.Currencies.UpdateCurrencyHandler" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Admin/Currencies/CurrencyHandlers.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(ExpenseTracker.Domain.Abstractions.ICurrencyRepository,ExpenseTracker.Domain.Abstractions.IUnitOfWork,ExpenseTracker.Domain.Abstractions.IClock)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="39" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="39" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Admin.Users.DeleteUserHandler" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Admin/Users/UserHandlers.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(ExpenseTracker.Domain.Abstractions.IUserRepository,ExpenseTracker.Domain.Abstractions.IRefreshTokenRepository,ExpenseTracker.Domain.Abstractions.IUnitOfWork,ExpenseTracker.Domain.Abstractions.IClock)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="119" hits="0" branch="false" />
+                <line number="120" hits="0" branch="false" />
+                <line number="121" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="119" hits="0" branch="false" />
+            <line number="120" hits="0" branch="false" />
+            <line number="121" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Admin.Users.GetUserHandler" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Admin/Users/UserHandlers.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(ExpenseTracker.Domain.Abstractions.IUserRepository)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="41" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="41" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Admin.Users.ListUsersHandler" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Admin/Users/UserHandlers.cs" line-rate="0" branch-rate="1" complexity="2">
+          <methods>
+            <method name="Map" signature="(ExpenseTracker.Domain.Entities.User)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="32" hits="0" branch="false" />
+                <line number="33" hits="0" branch="false" />
+                <line number="34" hits="0" branch="false" />
+                <line number="35" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(ExpenseTracker.Domain.Abstractions.IUserRepository)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="22" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="0" branch="false" />
+            <line number="32" hits="0" branch="false" />
+            <line number="33" hits="0" branch="false" />
+            <line number="34" hits="0" branch="false" />
+            <line number="35" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Admin.Users.UpdateUserHandler" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Admin/Users/UserHandlers.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(ExpenseTracker.Domain.Abstractions.IUserRepository,ExpenseTracker.Domain.Abstractions.ICurrencyRepository,ExpenseTracker.Domain.Abstractions.IUnitOfWork,ExpenseTracker.Domain.Abstractions.IClock)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="59" hits="0" branch="false" />
+                <line number="60" hits="0" branch="false" />
+                <line number="61" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="59" hits="0" branch="false" />
+            <line number="60" hits="0" branch="false" />
+            <line number="61" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Auth.LoginUserHandler" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Auth/LoginUserHandler.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(ExpenseTracker.Domain.Abstractions.IUserRepository,ExpenseTracker.Domain.Abstractions.IPasswordHasher,ExpenseTracker.Domain.Abstractions.ITokenService,ExpenseTracker.Domain.Abstractions.IRefreshTokenRepository,ExpenseTracker.Domain.Abstractions.IUnitOfWork,ExpenseTracker.Domain.Abstractions.IClock)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="24" hits="4" branch="false" />
+                <line number="25" hits="4" branch="false" />
+                <line number="26" hits="4" branch="false" />
+                <line number="27" hits="4" branch="false" />
+                <line number="28" hits="4" branch="false" />
+                <line number="29" hits="4" branch="false" />
+                <line number="30" hits="4" branch="false" />
+                <line number="31" hits="4" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="4" branch="false" />
+            <line number="25" hits="4" branch="false" />
+            <line number="26" hits="4" branch="false" />
+            <line number="27" hits="4" branch="false" />
+            <line number="28" hits="4" branch="false" />
+            <line number="29" hits="4" branch="false" />
+            <line number="30" hits="4" branch="false" />
+            <line number="31" hits="4" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Auth.LogoutHandler" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Auth/LoginUserHandler.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(ExpenseTracker.Domain.Abstractions.IRefreshTokenRepository,ExpenseTracker.Domain.Abstractions.ITokenService,ExpenseTracker.Domain.Abstractions.IUnitOfWork,ExpenseTracker.Domain.Abstractions.IClock)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="105" hits="2" branch="false" />
+                <line number="106" hits="2" branch="false" />
+                <line number="107" hits="2" branch="false" />
+                <line number="108" hits="2" branch="false" />
+                <line number="109" hits="2" branch="false" />
+                <line number="110" hits="2" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="105" hits="2" branch="false" />
+            <line number="106" hits="2" branch="false" />
+            <line number="107" hits="2" branch="false" />
+            <line number="108" hits="2" branch="false" />
+            <line number="109" hits="2" branch="false" />
+            <line number="110" hits="2" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Auth.RefreshTokenHandler" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Auth/LoginUserHandler.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(ExpenseTracker.Domain.Abstractions.IRefreshTokenRepository,ExpenseTracker.Domain.Abstractions.IUserRepository,ExpenseTracker.Domain.Abstractions.ITokenService,ExpenseTracker.Domain.Abstractions.IUnitOfWork,ExpenseTracker.Domain.Abstractions.IClock)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="65" hits="3" branch="false" />
+                <line number="66" hits="3" branch="false" />
+                <line number="67" hits="3" branch="false" />
+                <line number="68" hits="3" branch="false" />
+                <line number="69" hits="3" branch="false" />
+                <line number="70" hits="3" branch="false" />
+                <line number="71" hits="3" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="65" hits="3" branch="false" />
+            <line number="66" hits="3" branch="false" />
+            <line number="67" hits="3" branch="false" />
+            <line number="68" hits="3" branch="false" />
+            <line number="69" hits="3" branch="false" />
+            <line number="70" hits="3" branch="false" />
+            <line number="71" hits="3" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Auth.RegisterUserHandler" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Auth/RegisterUserHandler.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="ToProfile" signature="(ExpenseTracker.Domain.Entities.User)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="85" hits="3" branch="false" />
+                <line number="86" hits="3" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(ExpenseTracker.Domain.Abstractions.IUserRepository,ExpenseTracker.Domain.Abstractions.ICurrencyRepository,ExpenseTracker.Domain.Abstractions.IPasswordHasher,ExpenseTracker.Domain.Abstractions.ITokenService,ExpenseTracker.Domain.Abstractions.IRefreshTokenRepository,ExpenseTracker.Domain.Abstractions.IPhotoStorage,ExpenseTracker.Domain.Abstractions.IUnitOfWork,ExpenseTracker.Domain.Abstractions.IClock)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="28" hits="5" branch="false" />
+                <line number="29" hits="5" branch="false" />
+                <line number="30" hits="5" branch="false" />
+                <line number="31" hits="5" branch="false" />
+                <line number="32" hits="5" branch="false" />
+                <line number="33" hits="5" branch="false" />
+                <line number="34" hits="5" branch="false" />
+                <line number="35" hits="5" branch="false" />
+                <line number="36" hits="5" branch="false" />
+                <line number="37" hits="5" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="28" hits="5" branch="false" />
+            <line number="29" hits="5" branch="false" />
+            <line number="30" hits="5" branch="false" />
+            <line number="31" hits="5" branch="false" />
+            <line number="32" hits="5" branch="false" />
+            <line number="33" hits="5" branch="false" />
+            <line number="34" hits="5" branch="false" />
+            <line number="35" hits="5" branch="false" />
+            <line number="36" hits="5" branch="false" />
+            <line number="37" hits="5" branch="false" />
+            <line number="85" hits="3" branch="false" />
+            <line number="86" hits="3" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Auth.Validators.LoginValidator" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Auth/Validators/AuthValidators.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="23" hits="0" branch="false" />
+                <line number="24" hits="0" branch="false" />
+                <line number="25" hits="0" branch="false" />
+                <line number="26" hits="0" branch="false" />
+                <line number="27" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="0" branch="false" />
+            <line number="24" hits="0" branch="false" />
+            <line number="25" hits="0" branch="false" />
+            <line number="26" hits="0" branch="false" />
+            <line number="27" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Auth.Validators.RegisterUserValidator" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Auth/Validators/AuthValidators.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="false" />
+                <line number="9" hits="0" branch="false" />
+                <line number="10" hits="0" branch="false" />
+                <line number="11" hits="0" branch="false" />
+                <line number="12" hits="0" branch="false" />
+                <line number="13" hits="0" branch="false" />
+                <line number="14" hits="0" branch="false" />
+                <line number="15" hits="0" branch="false" />
+                <line number="16" hits="0" branch="false" />
+                <line number="17" hits="0" branch="false" />
+                <line number="18" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="0" branch="false" />
+            <line number="9" hits="0" branch="false" />
+            <line number="10" hits="0" branch="false" />
+            <line number="11" hits="0" branch="false" />
+            <line number="12" hits="0" branch="false" />
+            <line number="13" hits="0" branch="false" />
+            <line number="14" hits="0" branch="false" />
+            <line number="15" hits="0" branch="false" />
+            <line number="16" hits="0" branch="false" />
+            <line number="17" hits="0" branch="false" />
+            <line number="18" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Common.AppException" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Common/AppException.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(System.String,System.String,System.Int32)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="17" branch="false" />
+                <line number="10" hits="17" branch="false" />
+                <line number="13" hits="17" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="17" branch="false" />
+            <line number="10" hits="17" branch="false" />
+            <line number="13" hits="17" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Common.ConflictException" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Common/AppException.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(System.String,System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="23" hits="12" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="12" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Common.ForbiddenException" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Common/AppException.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(System.String,System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="28" hits="6" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="28" hits="6" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Common.NotFoundException" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Common/AppException.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(System.String,System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="9" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="18" hits="9" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Common.Result" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Common/Result.cs" line-rate="0" branch-rate="1" complexity="5">
+          <methods>
+            <method name="get_IsFailure" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="33" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="Success" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="36" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="Failure" signature="(System.String,System.String)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="37" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="Failure" signature="(ExpenseTracker.Application.Common.Error)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="38" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Boolean,System.Nullable`1&lt;ExpenseTracker.Application.Common.Error&gt;)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="27" hits="0" branch="false" />
+                <line number="30" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="27" hits="0" branch="false" />
+            <line number="30" hits="0" branch="false" />
+            <line number="33" hits="0" branch="false" />
+            <line number="36" hits="0" branch="false" />
+            <line number="37" hits="0" branch="false" />
+            <line number="38" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Common.Result`1" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Common/Result.cs" line-rate="0" branch-rate="1" complexity="5">
+          <methods>
+            <method name="get_IsFailure" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="15" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="Success" signature="(T)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="Failure" signature="(System.String,System.String)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="Failure" signature="(ExpenseTracker.Application.Common.Error)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="21" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Boolean,T,System.Nullable`1&lt;ExpenseTracker.Application.Common.Error&gt;)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="false" />
+                <line number="9" hits="0" branch="false" />
+                <line number="10" hits="0" branch="false" />
+                <line number="11" hits="0" branch="false" />
+                <line number="12" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="0" branch="false" />
+            <line number="9" hits="0" branch="false" />
+            <line number="10" hits="0" branch="false" />
+            <line number="11" hits="0" branch="false" />
+            <line number="12" hits="0" branch="false" />
+            <line number="15" hits="0" branch="false" />
+            <line number="19" hits="0" branch="false" />
+            <line number="20" hits="0" branch="false" />
+            <line number="21" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Common.UnauthorizedException" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Common/AppException.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(System.String,System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="33" hits="15" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="33" hits="15" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Common.ValidationAppException" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Common/AppException.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(System.Collections.Generic.IReadOnlyDictionary`2&lt;System.String,System.String[]&gt;)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="41" hits="0" branch="false" />
+                <line number="42" hits="0" branch="false" />
+                <line number="44" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="41" hits="0" branch="false" />
+            <line number="42" hits="0" branch="false" />
+            <line number="44" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Dashboard.GetDashboardHandler" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Dashboard/GetDashboardHandler.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(ExpenseTracker.Domain.Abstractions.IUserRepository,ExpenseTracker.Domain.Abstractions.IMonthlySummaryRepository,ExpenseTracker.Domain.Abstractions.IEntryRepository,ExpenseTracker.Domain.Abstractions.IClock)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="22" hits="0" branch="false" />
+                <line number="23" hits="0" branch="false" />
+                <line number="24" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="0" branch="false" />
+            <line number="23" hits="0" branch="false" />
+            <line number="24" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Entries.CreateEntryHandler" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Entries/EntryHandlers.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="HandleAsync" signature="(System.Guid,ExpenseTracker.Application.Entries.Dtos.EntryCreateDto,System.Threading.CancellationToken)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="43" hits="6" branch="false" />
+                <line number="44" hits="6" branch="false" />
+                <line number="45" hits="6" branch="false" />
+                <line number="46" hits="6" branch="false" />
+                <line number="47" hits="6" branch="false" />
+                <line number="48" hits="6" branch="false" />
+                <line number="49" hits="6" branch="false" />
+                <line number="50" hits="6" branch="false" />
+                <line number="51" hits="6" branch="false" />
+                <line number="52" hits="6" branch="false" />
+                <line number="53" hits="6" branch="false" />
+                <line number="54" hits="6" branch="false" />
+                <line number="55" hits="6" branch="false" />
+                <line number="56" hits="6" branch="false" />
+                <line number="57" hits="6" branch="false" />
+                <line number="58" hits="6" branch="false" />
+                <line number="59" hits="6" branch="false" />
+                <line number="60" hits="6" branch="false" />
+                <line number="61" hits="6" branch="false" />
+                <line number="62" hits="6" branch="false" />
+                <line number="63" hits="6" branch="false" />
+                <line number="64" hits="6" branch="false" />
+                <line number="65" hits="6" branch="false" />
+                <line number="66" hits="6" branch="false" />
+                <line number="67" hits="6" branch="false" />
+                <line number="68" hits="6" branch="false" />
+                <line number="69" hits="6" branch="false" />
+                <line number="70" hits="6" branch="false" />
+                <line number="71" hits="6" branch="false" />
+                <line number="72" hits="6" branch="false" />
+                <line number="73" hits="6" branch="false" />
+                <line number="74" hits="6" branch="false" />
+                <line number="75" hits="6" branch="false" />
+                <line number="76" hits="6" branch="false" />
+                <line number="77" hits="6" branch="false" />
+                <line number="78" hits="6" branch="false" />
+                <line number="79" hits="6" branch="false" />
+                <line number="80" hits="6" branch="false" />
+                <line number="81" hits="6" branch="false" />
+                <line number="82" hits="6" branch="false" />
+                <line number="83" hits="6" branch="false" />
+                <line number="84" hits="6" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(ExpenseTracker.Domain.Abstractions.IUserRepository,ExpenseTracker.Domain.Abstractions.IEntryRepository,ExpenseTracker.Domain.Abstractions.ICategoryRepository,ExpenseTracker.Domain.Abstractions.IMonthlySummaryRepository,ExpenseTracker.Domain.Abstractions.IUserWriteCoordinator,ExpenseTracker.Domain.Abstractions.IUnitOfWork,ExpenseTracker.Domain.Abstractions.IClock)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="37" hits="6" branch="false" />
+                <line number="38" hits="18" branch="false" />
+                <line number="39" hits="24" branch="false" />
+                <line number="40" hits="6" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="37" hits="6" branch="false" />
+            <line number="38" hits="18" branch="false" />
+            <line number="39" hits="24" branch="false" />
+            <line number="40" hits="6" branch="false" />
+            <line number="43" hits="6" branch="false" />
+            <line number="44" hits="6" branch="false" />
+            <line number="45" hits="6" branch="false" />
+            <line number="46" hits="6" branch="false" />
+            <line number="47" hits="6" branch="false" />
+            <line number="48" hits="6" branch="false" />
+            <line number="49" hits="6" branch="false" />
+            <line number="50" hits="6" branch="false" />
+            <line number="51" hits="6" branch="false" />
+            <line number="52" hits="6" branch="false" />
+            <line number="53" hits="6" branch="false" />
+            <line number="54" hits="6" branch="false" />
+            <line number="55" hits="6" branch="false" />
+            <line number="56" hits="6" branch="false" />
+            <line number="57" hits="6" branch="false" />
+            <line number="58" hits="6" branch="false" />
+            <line number="59" hits="6" branch="false" />
+            <line number="60" hits="6" branch="false" />
+            <line number="61" hits="6" branch="false" />
+            <line number="62" hits="6" branch="false" />
+            <line number="63" hits="6" branch="false" />
+            <line number="64" hits="6" branch="false" />
+            <line number="65" hits="6" branch="false" />
+            <line number="66" hits="6" branch="false" />
+            <line number="67" hits="6" branch="false" />
+            <line number="68" hits="6" branch="false" />
+            <line number="69" hits="6" branch="false" />
+            <line number="70" hits="6" branch="false" />
+            <line number="71" hits="6" branch="false" />
+            <line number="72" hits="6" branch="false" />
+            <line number="73" hits="6" branch="false" />
+            <line number="74" hits="6" branch="false" />
+            <line number="75" hits="6" branch="false" />
+            <line number="76" hits="6" branch="false" />
+            <line number="77" hits="6" branch="false" />
+            <line number="78" hits="6" branch="false" />
+            <line number="79" hits="6" branch="false" />
+            <line number="80" hits="6" branch="false" />
+            <line number="81" hits="6" branch="false" />
+            <line number="82" hits="6" branch="false" />
+            <line number="83" hits="6" branch="false" />
+            <line number="84" hits="6" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Entries.DeleteEntryHandler" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Entries/EntryHandlers.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="HandleAsync" signature="(System.Guid,System.Guid,System.Threading.CancellationToken)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="174" hits="2" branch="false" />
+                <line number="175" hits="2" branch="false" />
+                <line number="176" hits="2" branch="false" />
+                <line number="177" hits="2" branch="false" />
+                <line number="178" hits="2" branch="false" />
+                <line number="179" hits="2" branch="false" />
+                <line number="180" hits="2" branch="false" />
+                <line number="181" hits="2" branch="false" />
+                <line number="182" hits="2" branch="false" />
+                <line number="183" hits="2" branch="false" />
+                <line number="184" hits="2" branch="false" />
+                <line number="185" hits="2" branch="false" />
+                <line number="186" hits="2" branch="false" />
+                <line number="187" hits="2" branch="false" />
+                <line number="188" hits="2" branch="false" />
+                <line number="189" hits="2" branch="false" />
+                <line number="190" hits="2" branch="false" />
+                <line number="191" hits="2" branch="false" />
+                <line number="192" hits="2" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(ExpenseTracker.Domain.Abstractions.IUserRepository,ExpenseTracker.Domain.Abstractions.IEntryRepository,ExpenseTracker.Domain.Abstractions.IMonthlySummaryRepository,ExpenseTracker.Domain.Abstractions.IUserWriteCoordinator,ExpenseTracker.Domain.Abstractions.IUnitOfWork,ExpenseTracker.Domain.Abstractions.IClock)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="168" hits="2" branch="false" />
+                <line number="169" hits="6" branch="false" />
+                <line number="170" hits="6" branch="false" />
+                <line number="171" hits="2" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="168" hits="2" branch="false" />
+            <line number="169" hits="6" branch="false" />
+            <line number="170" hits="6" branch="false" />
+            <line number="171" hits="2" branch="false" />
+            <line number="174" hits="2" branch="false" />
+            <line number="175" hits="2" branch="false" />
+            <line number="176" hits="2" branch="false" />
+            <line number="177" hits="2" branch="false" />
+            <line number="178" hits="2" branch="false" />
+            <line number="179" hits="2" branch="false" />
+            <line number="180" hits="2" branch="false" />
+            <line number="181" hits="2" branch="false" />
+            <line number="182" hits="2" branch="false" />
+            <line number="183" hits="2" branch="false" />
+            <line number="184" hits="2" branch="false" />
+            <line number="185" hits="2" branch="false" />
+            <line number="186" hits="2" branch="false" />
+            <line number="187" hits="2" branch="false" />
+            <line number="188" hits="2" branch="false" />
+            <line number="189" hits="2" branch="false" />
+            <line number="190" hits="2" branch="false" />
+            <line number="191" hits="2" branch="false" />
+            <line number="192" hits="2" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Entries.EntryMapper" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Entries/EntryHandlers.cs" line-rate="1" branch-rate="0.6" complexity="10">
+          <methods>
+            <method name="ToDto" signature="(ExpenseTracker.Domain.Entities.Entry,ExpenseTracker.Domain.Entities.Category)" line-rate="1" branch-rate="0.6" complexity="10">
+              <lines>
+                <line number="14" hits="4" branch="false" />
+                <line number="15" hits="4" branch="true" condition-coverage="60% (6/10)" />
+                <line number="16" hits="4" branch="false" />
+                <line number="17" hits="4" branch="false" />
+                <line number="18" hits="4" branch="false" />
+                <line number="19" hits="4" branch="false" />
+                <line number="20" hits="4" branch="false" />
+                <line number="21" hits="4" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="14" hits="4" branch="false" />
+            <line number="15" hits="4" branch="true" condition-coverage="60% (6/10)" />
+            <line number="16" hits="4" branch="false" />
+            <line number="17" hits="4" branch="false" />
+            <line number="18" hits="4" branch="false" />
+            <line number="19" hits="4" branch="false" />
+            <line number="20" hits="4" branch="false" />
+            <line number="21" hits="4" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Entries.GetEntryHandler" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Entries/EntryHandlers.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(ExpenseTracker.Domain.Abstractions.IEntryRepository,ExpenseTracker.Domain.Abstractions.ICategoryRepository)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="201" hits="0" branch="false" />
+                <line number="202" hits="0" branch="false" />
+                <line number="203" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="201" hits="0" branch="false" />
+            <line number="202" hits="0" branch="false" />
+            <line number="203" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Entries.ListEntriesByMonthHandler" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Entries/EntryHandlers.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(ExpenseTracker.Domain.Abstractions.IEntryRepository,ExpenseTracker.Domain.Abstractions.ICategoryRepository)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="224" hits="1" branch="false" />
+                <line number="225" hits="2" branch="false" />
+                <line number="226" hits="1" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="224" hits="1" branch="false" />
+            <line number="225" hits="2" branch="false" />
+            <line number="226" hits="1" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Entries.UpdateEntryHandler" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Entries/EntryHandlers.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="HandleAsync" signature="(System.Guid,System.Guid,ExpenseTracker.Application.Entries.Dtos.EntryUpdateDto,System.Threading.CancellationToken)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="106" hits="1" branch="false" />
+                <line number="107" hits="1" branch="false" />
+                <line number="108" hits="1" branch="false" />
+                <line number="109" hits="1" branch="false" />
+                <line number="110" hits="1" branch="false" />
+                <line number="111" hits="1" branch="false" />
+                <line number="112" hits="1" branch="false" />
+                <line number="113" hits="1" branch="false" />
+                <line number="114" hits="1" branch="false" />
+                <line number="115" hits="1" branch="false" />
+                <line number="116" hits="1" branch="false" />
+                <line number="117" hits="1" branch="false" />
+                <line number="118" hits="1" branch="false" />
+                <line number="119" hits="1" branch="false" />
+                <line number="120" hits="1" branch="false" />
+                <line number="121" hits="1" branch="false" />
+                <line number="122" hits="1" branch="false" />
+                <line number="123" hits="1" branch="false" />
+                <line number="124" hits="1" branch="false" />
+                <line number="125" hits="1" branch="false" />
+                <line number="126" hits="1" branch="false" />
+                <line number="127" hits="1" branch="false" />
+                <line number="128" hits="1" branch="false" />
+                <line number="129" hits="1" branch="false" />
+                <line number="130" hits="1" branch="false" />
+                <line number="131" hits="1" branch="false" />
+                <line number="132" hits="1" branch="false" />
+                <line number="133" hits="1" branch="false" />
+                <line number="134" hits="1" branch="false" />
+                <line number="135" hits="1" branch="false" />
+                <line number="136" hits="1" branch="false" />
+                <line number="137" hits="1" branch="false" />
+                <line number="138" hits="1" branch="false" />
+                <line number="139" hits="1" branch="false" />
+                <line number="140" hits="1" branch="false" />
+                <line number="141" hits="1" branch="false" />
+                <line number="142" hits="1" branch="false" />
+                <line number="143" hits="1" branch="false" />
+                <line number="144" hits="1" branch="false" />
+                <line number="145" hits="1" branch="false" />
+                <line number="146" hits="1" branch="false" />
+                <line number="147" hits="1" branch="false" />
+                <line number="148" hits="1" branch="false" />
+                <line number="149" hits="1" branch="false" />
+                <line number="150" hits="1" branch="false" />
+                <line number="151" hits="1" branch="false" />
+                <line number="152" hits="1" branch="false" />
+                <line number="153" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(ExpenseTracker.Domain.Abstractions.IUserRepository,ExpenseTracker.Domain.Abstractions.IEntryRepository,ExpenseTracker.Domain.Abstractions.ICategoryRepository,ExpenseTracker.Domain.Abstractions.IMonthlySummaryRepository,ExpenseTracker.Domain.Abstractions.IUserWriteCoordinator,ExpenseTracker.Domain.Abstractions.IUnitOfWork,ExpenseTracker.Domain.Abstractions.IClock)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="100" hits="1" branch="false" />
+                <line number="101" hits="3" branch="false" />
+                <line number="102" hits="4" branch="false" />
+                <line number="103" hits="1" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="100" hits="1" branch="false" />
+            <line number="101" hits="3" branch="false" />
+            <line number="102" hits="4" branch="false" />
+            <line number="103" hits="1" branch="false" />
+            <line number="106" hits="1" branch="false" />
+            <line number="107" hits="1" branch="false" />
+            <line number="108" hits="1" branch="false" />
+            <line number="109" hits="1" branch="false" />
+            <line number="110" hits="1" branch="false" />
+            <line number="111" hits="1" branch="false" />
+            <line number="112" hits="1" branch="false" />
+            <line number="113" hits="1" branch="false" />
+            <line number="114" hits="1" branch="false" />
+            <line number="115" hits="1" branch="false" />
+            <line number="116" hits="1" branch="false" />
+            <line number="117" hits="1" branch="false" />
+            <line number="118" hits="1" branch="false" />
+            <line number="119" hits="1" branch="false" />
+            <line number="120" hits="1" branch="false" />
+            <line number="121" hits="1" branch="false" />
+            <line number="122" hits="1" branch="false" />
+            <line number="123" hits="1" branch="false" />
+            <line number="124" hits="1" branch="false" />
+            <line number="125" hits="1" branch="false" />
+            <line number="126" hits="1" branch="false" />
+            <line number="127" hits="1" branch="false" />
+            <line number="128" hits="1" branch="false" />
+            <line number="129" hits="1" branch="false" />
+            <line number="130" hits="1" branch="false" />
+            <line number="131" hits="1" branch="false" />
+            <line number="132" hits="1" branch="false" />
+            <line number="133" hits="1" branch="false" />
+            <line number="134" hits="1" branch="false" />
+            <line number="135" hits="1" branch="false" />
+            <line number="136" hits="1" branch="false" />
+            <line number="137" hits="1" branch="false" />
+            <line number="138" hits="1" branch="false" />
+            <line number="139" hits="1" branch="false" />
+            <line number="140" hits="1" branch="false" />
+            <line number="141" hits="1" branch="false" />
+            <line number="142" hits="1" branch="false" />
+            <line number="143" hits="1" branch="false" />
+            <line number="144" hits="1" branch="false" />
+            <line number="145" hits="1" branch="false" />
+            <line number="146" hits="1" branch="false" />
+            <line number="147" hits="1" branch="false" />
+            <line number="148" hits="1" branch="false" />
+            <line number="149" hits="1" branch="false" />
+            <line number="150" hits="1" branch="false" />
+            <line number="151" hits="1" branch="false" />
+            <line number="152" hits="1" branch="false" />
+            <line number="153" hits="1" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Entries.Validators.EntryCreateValidator" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Entries/Validators/EntryValidators.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="false" />
+                <line number="9" hits="0" branch="false" />
+                <line number="10" hits="0" branch="false" />
+                <line number="11" hits="0" branch="false" />
+                <line number="12" hits="0" branch="false" />
+                <line number="13" hits="0" branch="false" />
+                <line number="14" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="0" branch="false" />
+            <line number="9" hits="0" branch="false" />
+            <line number="10" hits="0" branch="false" />
+            <line number="11" hits="0" branch="false" />
+            <line number="12" hits="0" branch="false" />
+            <line number="13" hits="0" branch="false" />
+            <line number="14" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Entries.Validators.EntryUpdateValidator" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Entries/Validators/EntryValidators.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="0" branch="false" />
+                <line number="20" hits="0" branch="false" />
+                <line number="21" hits="0" branch="false" />
+                <line number="22" hits="0" branch="false" />
+                <line number="23" hits="0" branch="false" />
+                <line number="24" hits="0" branch="false" />
+                <line number="25" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="19" hits="0" branch="false" />
+            <line number="20" hits="0" branch="false" />
+            <line number="21" hits="0" branch="false" />
+            <line number="22" hits="0" branch="false" />
+            <line number="23" hits="0" branch="false" />
+            <line number="24" hits="0" branch="false" />
+            <line number="25" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Application.Months.GetMonthlyViewHandler" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Application/Months/GetMonthlyViewHandler.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(ExpenseTracker.Domain.Abstractions.IUserRepository,ExpenseTracker.Domain.Abstractions.IEntryRepository,ExpenseTracker.Domain.Abstractions.ICategoryRepository,ExpenseTracker.Domain.Abstractions.IMonthlySummaryRepository,ExpenseTracker.Domain.Abstractions.IClock)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="22" hits="0" branch="false" />
+                <line number="23" hits="0" branch="false" />
+                <line number="24" hits="0" branch="false" />
+                <line number="25" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="0" branch="false" />
+            <line number="23" hits="0" branch="false" />
+            <line number="24" hits="0" branch="false" />
+            <line number="25" hits="0" branch="false" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="ExpenseTracker.Domain" line-rate="0.7048346055979644" branch-rate="0.6846846846846847" complexity="150">
+      <classes>
+        <class name="ExpenseTracker.Domain.Entities.Category" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Domain/Entities/Category.cs" line-rate="0.8666666666666667" branch-rate="0.5" complexity="7">
+          <methods>
+            <method name="Create" signature="(System.String,ExpenseTracker.Domain.Common.EntryType,System.DateTime)" line-rate="0.8571428571428571" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="17" hits="8" branch="false" />
+                <line number="18" hits="8" branch="true" condition-coverage="50% (1/2)" />
+                <line number="19" hits="0" branch="false" />
+                <line number="20" hits="0" branch="false" />
+                <line number="22" hits="8" branch="false" />
+                <line number="23" hits="8" branch="false" />
+                <line number="24" hits="8" branch="false" />
+                <line number="25" hits="8" branch="false" />
+                <line number="26" hits="8" branch="false" />
+                <line number="27" hits="8" branch="false" />
+                <line number="28" hits="8" branch="false" />
+                <line number="29" hits="8" branch="false" />
+                <line number="30" hits="8" branch="false" />
+                <line number="31" hits="8" branch="false" />
+              </lines>
+            </method>
+            <method name="Rename" signature="(System.String,System.DateTime)" line-rate="0.7142857142857143" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="34" hits="1" branch="false" />
+                <line number="35" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="36" hits="0" branch="false" />
+                <line number="37" hits="0" branch="false" />
+                <line number="39" hits="1" branch="false" />
+                <line number="40" hits="1" branch="false" />
+                <line number="41" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="Activate" signature="(System.DateTime)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="44" hits="1" branch="false" />
+                <line number="45" hits="1" branch="false" />
+                <line number="46" hits="1" branch="false" />
+                <line number="47" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="Deactivate" signature="(System.DateTime)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="50" hits="3" branch="false" />
+                <line number="51" hits="3" branch="false" />
+                <line number="52" hits="3" branch="false" />
+                <line number="53" hits="3" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="16" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="16" branch="false" />
+            <line number="17" hits="8" branch="false" />
+            <line number="18" hits="8" branch="true" condition-coverage="50% (1/2)" />
+            <line number="19" hits="0" branch="false" />
+            <line number="20" hits="0" branch="false" />
+            <line number="22" hits="8" branch="false" />
+            <line number="23" hits="8" branch="false" />
+            <line number="24" hits="8" branch="false" />
+            <line number="25" hits="8" branch="false" />
+            <line number="26" hits="8" branch="false" />
+            <line number="27" hits="8" branch="false" />
+            <line number="28" hits="8" branch="false" />
+            <line number="29" hits="8" branch="false" />
+            <line number="30" hits="8" branch="false" />
+            <line number="31" hits="8" branch="false" />
+            <line number="34" hits="1" branch="false" />
+            <line number="35" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="36" hits="0" branch="false" />
+            <line number="37" hits="0" branch="false" />
+            <line number="39" hits="1" branch="false" />
+            <line number="40" hits="1" branch="false" />
+            <line number="41" hits="1" branch="false" />
+            <line number="44" hits="1" branch="false" />
+            <line number="45" hits="1" branch="false" />
+            <line number="46" hits="1" branch="false" />
+            <line number="47" hits="1" branch="false" />
+            <line number="50" hits="3" branch="false" />
+            <line number="51" hits="3" branch="false" />
+            <line number="52" hits="3" branch="false" />
+            <line number="53" hits="3" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Domain.Entities.Currency" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Domain/Entities/Currency.cs" line-rate="0.5" branch-rate="0.375" complexity="19">
+          <methods>
+            <method name="Create" signature="(System.String,System.String,System.String,System.DateTime)" line-rate="0.8571428571428571" branch-rate="0.5" complexity="12">
+              <lines>
+                <line number="16" hits="4" branch="false" />
+                <line number="17" hits="4" branch="true" condition-coverage="50% (2/4)" />
+                <line number="18" hits="0" branch="false" />
+                <line number="19" hits="0" branch="false" />
+                <line number="21" hits="4" branch="true" condition-coverage="50% (4/8)" />
+                <line number="22" hits="4" branch="false" />
+                <line number="23" hits="4" branch="false" />
+                <line number="24" hits="4" branch="false" />
+                <line number="25" hits="4" branch="false" />
+                <line number="26" hits="4" branch="false" />
+                <line number="27" hits="4" branch="false" />
+                <line number="28" hits="4" branch="false" />
+                <line number="29" hits="4" branch="false" />
+                <line number="30" hits="4" branch="false" />
+              </lines>
+            </method>
+            <method name="Update" signature="(System.String,System.String,System.DateTime)" line-rate="0" branch-rate="0" complexity="4">
+              <lines>
+                <line number="33" hits="0" branch="false" />
+                <line number="34" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="35" hits="0" branch="false" />
+                <line number="36" hits="0" branch="false" />
+                <line number="37" hits="0" branch="false" />
+                <line number="38" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="39" hits="0" branch="false" />
+                <line number="40" hits="0" branch="false" />
+                <line number="41" hits="0" branch="false" />
+                <line number="42" hits="0" branch="false" />
+                <line number="43" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="Activate" signature="(System.DateTime)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="46" hits="0" branch="false" />
+                <line number="47" hits="0" branch="false" />
+                <line number="48" hits="0" branch="false" />
+                <line number="49" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="Deactivate" signature="(System.DateTime)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="52" hits="1" branch="false" />
+                <line number="53" hits="1" branch="false" />
+                <line number="54" hits="1" branch="false" />
+                <line number="55" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="8" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="8" branch="false" />
+            <line number="16" hits="4" branch="false" />
+            <line number="17" hits="4" branch="true" condition-coverage="50% (2/4)" />
+            <line number="18" hits="0" branch="false" />
+            <line number="19" hits="0" branch="false" />
+            <line number="21" hits="4" branch="true" condition-coverage="50% (4/8)" />
+            <line number="22" hits="4" branch="false" />
+            <line number="23" hits="4" branch="false" />
+            <line number="24" hits="4" branch="false" />
+            <line number="25" hits="4" branch="false" />
+            <line number="26" hits="4" branch="false" />
+            <line number="27" hits="4" branch="false" />
+            <line number="28" hits="4" branch="false" />
+            <line number="29" hits="4" branch="false" />
+            <line number="30" hits="4" branch="false" />
+            <line number="33" hits="0" branch="false" />
+            <line number="34" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="35" hits="0" branch="false" />
+            <line number="36" hits="0" branch="false" />
+            <line number="37" hits="0" branch="false" />
+            <line number="38" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="39" hits="0" branch="false" />
+            <line number="40" hits="0" branch="false" />
+            <line number="41" hits="0" branch="false" />
+            <line number="42" hits="0" branch="false" />
+            <line number="43" hits="0" branch="false" />
+            <line number="46" hits="0" branch="false" />
+            <line number="47" hits="0" branch="false" />
+            <line number="48" hits="0" branch="false" />
+            <line number="49" hits="0" branch="false" />
+            <line number="52" hits="1" branch="false" />
+            <line number="53" hits="1" branch="false" />
+            <line number="54" hits="1" branch="false" />
+            <line number="55" hits="1" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Domain.Entities.Entry" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Domain/Entities/Entry.cs" line-rate="0.671875" branch-rate="0.6538461538461539" complexity="28">
+          <methods>
+            <method name="get_MonthYear" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="31" hits="3" branch="false" />
+              </lines>
+            </method>
+            <method name="Create" signature="(System.Guid,System.DateOnly,ExpenseTracker.Domain.Common.EntryType,System.Decimal,System.String,System.Nullable`1&lt;System.Guid&gt;,System.String,System.String,System.Nullable`1&lt;ExpenseTracker.Domain.Common.EntryType&gt;,ExpenseTracker.Domain.ValueObjects.MonthYear,System.DateTime)" line-rate="0.8620689655172413" branch-rate="0.8" complexity="10">
+              <lines>
+                <line number="45" hits="28" branch="false" />
+                <line number="46" hits="28" branch="true" condition-coverage="50% (1/2)" />
+                <line number="47" hits="0" branch="false" />
+                <line number="48" hits="0" branch="false" />
+                <line number="50" hits="28" branch="true" condition-coverage="100% (2/2)" />
+                <line number="51" hits="1" branch="false" />
+                <line number="52" hits="1" branch="false" />
+                <line number="54" hits="27" branch="true" condition-coverage="50% (1/2)" />
+                <line number="55" hits="0" branch="false" />
+                <line number="56" hits="0" branch="false" />
+                <line number="59" hits="27" branch="false" />
+                <line number="60" hits="26" branch="false" />
+                <line number="62" hits="25" branch="true" condition-coverage="100% (4/4)" />
+                <line number="63" hits="25" branch="false" />
+                <line number="64" hits="25" branch="false" />
+                <line number="65" hits="25" branch="false" />
+                <line number="66" hits="25" branch="false" />
+                <line number="67" hits="25" branch="false" />
+                <line number="68" hits="25" branch="false" />
+                <line number="69" hits="25" branch="false" />
+                <line number="70" hits="25" branch="false" />
+                <line number="71" hits="25" branch="false" />
+                <line number="72" hits="25" branch="false" />
+                <line number="73" hits="25" branch="false" />
+                <line number="74" hits="25" branch="false" />
+                <line number="75" hits="25" branch="false" />
+                <line number="76" hits="25" branch="false" />
+                <line number="77" hits="25" branch="false" />
+                <line number="78" hits="25" branch="false" />
+              </lines>
+            </method>
+            <method name="Update" signature="(System.DateOnly,ExpenseTracker.Domain.Common.EntryType,System.Decimal,System.Nullable`1&lt;System.Guid&gt;,System.String,System.String,System.Nullable`1&lt;ExpenseTracker.Domain.Common.EntryType&gt;,ExpenseTracker.Domain.ValueObjects.MonthYear,System.DateTime)" line-rate="0" branch-rate="0" complexity="6">
+              <lines>
+                <line number="90" hits="0" branch="false" />
+                <line number="91" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="92" hits="0" branch="false" />
+                <line number="93" hits="0" branch="false" />
+                <line number="96" hits="0" branch="false" />
+                <line number="97" hits="0" branch="false" />
+                <line number="99" hits="0" branch="false" />
+                <line number="100" hits="0" branch="false" />
+                <line number="101" hits="0" branch="false" />
+                <line number="102" hits="0" branch="false" />
+                <line number="103" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="104" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="105" hits="0" branch="false" />
+                <line number="106" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="EnsureCategorySelection" signature="(ExpenseTracker.Domain.Common.EntryType,System.Nullable`1&lt;System.Guid&gt;,System.String,System.Nullable`1&lt;ExpenseTracker.Domain.Common.EntryType&gt;)" line-rate="0.75" branch-rate="0.875" complexity="8">
+              <lines>
+                <line number="113" hits="27" branch="false" />
+                <line number="114" hits="27" branch="false" />
+                <line number="115" hits="27" branch="false" />
+                <line number="117" hits="27" branch="true" condition-coverage="50% (1/2)" />
+                <line number="118" hits="0" branch="false" />
+                <line number="119" hits="0" branch="false" />
+                <line number="120" hits="0" branch="false" />
+                <line number="123" hits="27" branch="true" condition-coverage="100% (6/6)" />
+                <line number="124" hits="1" branch="false" />
+                <line number="125" hits="1" branch="false" />
+                <line number="126" hits="1" branch="false" />
+                <line number="128" hits="26" branch="false" />
+              </lines>
+            </method>
+            <method name="EnsureNotFutureMonth" signature="(System.DateOnly,ExpenseTracker.Domain.ValueObjects.MonthYear)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="131" hits="26" branch="false" />
+                <line number="132" hits="26" branch="false" />
+                <line number="133" hits="26" branch="true" condition-coverage="100% (2/2)" />
+                <line number="134" hits="1" branch="false" />
+                <line number="135" hits="1" branch="false" />
+                <line number="136" hits="1" branch="false" />
+                <line number="138" hits="25" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="50" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="50" branch="false" />
+            <line number="31" hits="3" branch="false" />
+            <line number="45" hits="28" branch="false" />
+            <line number="46" hits="28" branch="true" condition-coverage="50% (1/2)" />
+            <line number="47" hits="0" branch="false" />
+            <line number="48" hits="0" branch="false" />
+            <line number="50" hits="28" branch="true" condition-coverage="100% (2/2)" />
+            <line number="51" hits="1" branch="false" />
+            <line number="52" hits="1" branch="false" />
+            <line number="54" hits="27" branch="true" condition-coverage="50% (1/2)" />
+            <line number="55" hits="0" branch="false" />
+            <line number="56" hits="0" branch="false" />
+            <line number="59" hits="27" branch="false" />
+            <line number="60" hits="26" branch="false" />
+            <line number="62" hits="25" branch="true" condition-coverage="100% (4/4)" />
+            <line number="63" hits="25" branch="false" />
+            <line number="64" hits="25" branch="false" />
+            <line number="65" hits="25" branch="false" />
+            <line number="66" hits="25" branch="false" />
+            <line number="67" hits="25" branch="false" />
+            <line number="68" hits="25" branch="false" />
+            <line number="69" hits="25" branch="false" />
+            <line number="70" hits="25" branch="false" />
+            <line number="71" hits="25" branch="false" />
+            <line number="72" hits="25" branch="false" />
+            <line number="73" hits="25" branch="false" />
+            <line number="74" hits="25" branch="false" />
+            <line number="75" hits="25" branch="false" />
+            <line number="76" hits="25" branch="false" />
+            <line number="77" hits="25" branch="false" />
+            <line number="78" hits="25" branch="false" />
+            <line number="90" hits="0" branch="false" />
+            <line number="91" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="92" hits="0" branch="false" />
+            <line number="93" hits="0" branch="false" />
+            <line number="96" hits="0" branch="false" />
+            <line number="97" hits="0" branch="false" />
+            <line number="99" hits="0" branch="false" />
+            <line number="100" hits="0" branch="false" />
+            <line number="101" hits="0" branch="false" />
+            <line number="102" hits="0" branch="false" />
+            <line number="103" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="104" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="105" hits="0" branch="false" />
+            <line number="106" hits="0" branch="false" />
+            <line number="113" hits="27" branch="false" />
+            <line number="114" hits="27" branch="false" />
+            <line number="115" hits="27" branch="false" />
+            <line number="117" hits="27" branch="true" condition-coverage="50% (1/2)" />
+            <line number="118" hits="0" branch="false" />
+            <line number="119" hits="0" branch="false" />
+            <line number="120" hits="0" branch="false" />
+            <line number="123" hits="27" branch="true" condition-coverage="100% (6/6)" />
+            <line number="124" hits="1" branch="false" />
+            <line number="125" hits="1" branch="false" />
+            <line number="126" hits="1" branch="false" />
+            <line number="128" hits="26" branch="false" />
+            <line number="131" hits="26" branch="false" />
+            <line number="132" hits="26" branch="false" />
+            <line number="133" hits="26" branch="true" condition-coverage="100% (2/2)" />
+            <line number="134" hits="1" branch="false" />
+            <line number="135" hits="1" branch="false" />
+            <line number="136" hits="1" branch="false" />
+            <line number="138" hits="25" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Domain.Entities.MonthlySummary" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Domain/Entities/MonthlySummary.cs" line-rate="1" branch-rate="1" complexity="4">
+          <methods>
+            <method name="get_MonthYear" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="22" hits="2" branch="false" />
+              </lines>
+            </method>
+            <method name="Create" signature="(System.Guid,ExpenseTracker.Domain.ValueObjects.MonthYear,System.Decimal,System.Decimal,System.Decimal,System.Decimal,ExpenseTracker.Domain.Common.StatusColor,System.String,System.DateTime)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="33" hits="11" branch="false" />
+                <line number="34" hits="11" branch="false" />
+                <line number="35" hits="11" branch="false" />
+                <line number="36" hits="11" branch="false" />
+                <line number="37" hits="11" branch="false" />
+                <line number="38" hits="11" branch="false" />
+                <line number="39" hits="11" branch="false" />
+                <line number="40" hits="11" branch="false" />
+                <line number="41" hits="11" branch="false" />
+                <line number="42" hits="11" branch="false" />
+                <line number="43" hits="11" branch="false" />
+                <line number="44" hits="11" branch="false" />
+                <line number="45" hits="11" branch="false" />
+                <line number="46" hits="11" branch="false" />
+              </lines>
+            </method>
+            <method name="Update" signature="(System.Decimal,System.Decimal,System.Decimal,System.Decimal,ExpenseTracker.Domain.Common.StatusColor,System.DateTime)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="55" hits="2" branch="false" />
+                <line number="56" hits="2" branch="false" />
+                <line number="57" hits="2" branch="false" />
+                <line number="58" hits="2" branch="false" />
+                <line number="59" hits="2" branch="false" />
+                <line number="60" hits="2" branch="false" />
+                <line number="61" hits="2" branch="false" />
+                <line number="62" hits="2" branch="false" />
+                <line number="63" hits="2" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="22" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="22" branch="false" />
+            <line number="22" hits="2" branch="false" />
+            <line number="33" hits="11" branch="false" />
+            <line number="34" hits="11" branch="false" />
+            <line number="35" hits="11" branch="false" />
+            <line number="36" hits="11" branch="false" />
+            <line number="37" hits="11" branch="false" />
+            <line number="38" hits="11" branch="false" />
+            <line number="39" hits="11" branch="false" />
+            <line number="40" hits="11" branch="false" />
+            <line number="41" hits="11" branch="false" />
+            <line number="42" hits="11" branch="false" />
+            <line number="43" hits="11" branch="false" />
+            <line number="44" hits="11" branch="false" />
+            <line number="45" hits="11" branch="false" />
+            <line number="46" hits="11" branch="false" />
+            <line number="55" hits="2" branch="false" />
+            <line number="56" hits="2" branch="false" />
+            <line number="57" hits="2" branch="false" />
+            <line number="58" hits="2" branch="false" />
+            <line number="59" hits="2" branch="false" />
+            <line number="60" hits="2" branch="false" />
+            <line number="61" hits="2" branch="false" />
+            <line number="62" hits="2" branch="false" />
+            <line number="63" hits="2" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Domain.Entities.RefreshToken" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Domain/Entities/RefreshToken.cs" line-rate="0.8823529411764706" branch-rate="0.5" complexity="6">
+          <methods>
+            <method name="get_IsActive" signature="()" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="15" hits="2" branch="true" condition-coverage="50% (1/2)" />
+              </lines>
+            </method>
+            <method name="Issue" signature="(System.Guid,System.String,System.DateTime,System.DateTime)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="6" branch="false" />
+                <line number="18" hits="6" branch="false" />
+                <line number="19" hits="6" branch="false" />
+                <line number="20" hits="6" branch="false" />
+                <line number="21" hits="6" branch="false" />
+                <line number="22" hits="6" branch="false" />
+                <line number="23" hits="6" branch="false" />
+                <line number="24" hits="6" branch="false" />
+              </lines>
+            </method>
+            <method name="Revoke" signature="(System.DateTime,System.Nullable`1&lt;System.Guid&gt;)" line-rate="0.7142857142857143" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="27" hits="2" branch="false" />
+                <line number="28" hits="2" branch="true" condition-coverage="50% (1/2)" />
+                <line number="29" hits="0" branch="false" />
+                <line number="30" hits="0" branch="false" />
+                <line number="32" hits="2" branch="false" />
+                <line number="33" hits="2" branch="false" />
+                <line number="34" hits="2" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="12" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="12" branch="false" />
+            <line number="15" hits="2" branch="true" condition-coverage="50% (1/2)" />
+            <line number="17" hits="6" branch="false" />
+            <line number="18" hits="6" branch="false" />
+            <line number="19" hits="6" branch="false" />
+            <line number="20" hits="6" branch="false" />
+            <line number="21" hits="6" branch="false" />
+            <line number="22" hits="6" branch="false" />
+            <line number="23" hits="6" branch="false" />
+            <line number="24" hits="6" branch="false" />
+            <line number="27" hits="2" branch="false" />
+            <line number="28" hits="2" branch="true" condition-coverage="50% (1/2)" />
+            <line number="29" hits="0" branch="false" />
+            <line number="30" hits="0" branch="false" />
+            <line number="32" hits="2" branch="false" />
+            <line number="33" hits="2" branch="false" />
+            <line number="34" hits="2" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Domain.Entities.User" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Domain/Entities/User.cs" line-rate="0.8765432098765432" branch-rate="1" complexity="25">
+          <methods>
+            <method name="Create" signature="(System.String,System.String,System.String,System.String,System.String,System.DateTime,ExpenseTracker.Domain.Common.UserRole)" line-rate="1" branch-rate="1" complexity="10">
+              <lines>
+                <line number="33" hits="30" branch="false" />
+                <line number="34" hits="30" branch="true" condition-coverage="100% (2/2)" />
+                <line number="35" hits="1" branch="false" />
+                <line number="36" hits="1" branch="false" />
+                <line number="38" hits="29" branch="true" condition-coverage="100% (2/2)" />
+                <line number="39" hits="1" branch="false" />
+                <line number="40" hits="1" branch="false" />
+                <line number="42" hits="28" branch="true" condition-coverage="100% (2/2)" />
+                <line number="43" hits="1" branch="false" />
+                <line number="44" hits="1" branch="false" />
+                <line number="46" hits="27" branch="true" condition-coverage="100% (2/2)" />
+                <line number="47" hits="1" branch="false" />
+                <line number="48" hits="1" branch="false" />
+                <line number="50" hits="26" branch="true" condition-coverage="100% (2/2)" />
+                <line number="51" hits="1" branch="false" />
+                <line number="52" hits="1" branch="false" />
+                <line number="55" hits="25" branch="false" />
+                <line number="56" hits="25" branch="false" />
+                <line number="57" hits="25" branch="false" />
+                <line number="58" hits="25" branch="false" />
+                <line number="59" hits="25" branch="false" />
+                <line number="60" hits="25" branch="false" />
+                <line number="61" hits="25" branch="false" />
+                <line number="62" hits="25" branch="false" />
+                <line number="63" hits="25" branch="false" />
+                <line number="64" hits="25" branch="false" />
+                <line number="65" hits="25" branch="false" />
+                <line number="66" hits="25" branch="false" />
+                <line number="67" hits="25" branch="false" />
+                <line number="68" hits="25" branch="false" />
+              </lines>
+            </method>
+            <method name="UpdateProfile" signature="(System.String,System.String,System.String,System.DateTime)" line-rate="1" branch-rate="1" complexity="6">
+              <lines>
+                <line number="71" hits="1" branch="false" />
+                <line number="72" hits="1" branch="true" condition-coverage="100% (2/2)" />
+                <line number="73" hits="1" branch="false" />
+                <line number="74" hits="1" branch="false" />
+                <line number="75" hits="1" branch="false" />
+                <line number="76" hits="1" branch="true" condition-coverage="100% (2/2)" />
+                <line number="77" hits="1" branch="false" />
+                <line number="78" hits="1" branch="false" />
+                <line number="79" hits="1" branch="false" />
+                <line number="80" hits="1" branch="true" condition-coverage="100% (2/2)" />
+                <line number="81" hits="1" branch="false" />
+                <line number="82" hits="1" branch="false" />
+                <line number="83" hits="1" branch="false" />
+                <line number="84" hits="1" branch="false" />
+                <line number="85" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="ChangeRole" signature="(ExpenseTracker.Domain.Common.UserRole,System.DateTime)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="88" hits="1" branch="false" />
+                <line number="89" hits="1" branch="false" />
+                <line number="90" hits="1" branch="false" />
+                <line number="91" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="Activate" signature="(System.DateTime)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="94" hits="1" branch="false" />
+                <line number="95" hits="1" branch="false" />
+                <line number="96" hits="1" branch="false" />
+                <line number="97" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="Deactivate" signature="(System.DateTime)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="100" hits="3" branch="false" />
+                <line number="101" hits="3" branch="false" />
+                <line number="102" hits="3" branch="false" />
+                <line number="103" hits="3" branch="false" />
+              </lines>
+            </method>
+            <method name="SoftDelete" signature="(System.DateTime)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="106" hits="2" branch="false" />
+                <line number="107" hits="2" branch="false" />
+                <line number="108" hits="2" branch="false" />
+                <line number="109" hits="2" branch="false" />
+                <line number="110" hits="2" branch="false" />
+                <line number="111" hits="2" branch="false" />
+              </lines>
+            </method>
+            <method name="SetPasswordHash" signature="(System.String,System.DateTime)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="114" hits="2" branch="false" />
+                <line number="115" hits="2" branch="true" condition-coverage="100% (2/2)" />
+                <line number="116" hits="1" branch="false" />
+                <line number="117" hits="1" branch="false" />
+                <line number="119" hits="1" branch="false" />
+                <line number="120" hits="1" branch="false" />
+                <line number="121" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="AttachPhoto" signature="(ExpenseTracker.Domain.Entities.UserProfilePhoto,System.DateTime)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="124" hits="0" branch="false" />
+                <line number="125" hits="0" branch="false" />
+                <line number="126" hits="0" branch="false" />
+                <line number="127" hits="0" branch="false" />
+                <line number="128" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="RemovePhoto" signature="(System.DateTime)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="131" hits="0" branch="false" />
+                <line number="132" hits="0" branch="false" />
+                <line number="133" hits="0" branch="false" />
+                <line number="134" hits="0" branch="false" />
+                <line number="135" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="50" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="50" branch="false" />
+            <line number="33" hits="30" branch="false" />
+            <line number="34" hits="30" branch="true" condition-coverage="100% (2/2)" />
+            <line number="35" hits="1" branch="false" />
+            <line number="36" hits="1" branch="false" />
+            <line number="38" hits="29" branch="true" condition-coverage="100% (2/2)" />
+            <line number="39" hits="1" branch="false" />
+            <line number="40" hits="1" branch="false" />
+            <line number="42" hits="28" branch="true" condition-coverage="100% (2/2)" />
+            <line number="43" hits="1" branch="false" />
+            <line number="44" hits="1" branch="false" />
+            <line number="46" hits="27" branch="true" condition-coverage="100% (2/2)" />
+            <line number="47" hits="1" branch="false" />
+            <line number="48" hits="1" branch="false" />
+            <line number="50" hits="26" branch="true" condition-coverage="100% (2/2)" />
+            <line number="51" hits="1" branch="false" />
+            <line number="52" hits="1" branch="false" />
+            <line number="55" hits="25" branch="false" />
+            <line number="56" hits="25" branch="false" />
+            <line number="57" hits="25" branch="false" />
+            <line number="58" hits="25" branch="false" />
+            <line number="59" hits="25" branch="false" />
+            <line number="60" hits="25" branch="false" />
+            <line number="61" hits="25" branch="false" />
+            <line number="62" hits="25" branch="false" />
+            <line number="63" hits="25" branch="false" />
+            <line number="64" hits="25" branch="false" />
+            <line number="65" hits="25" branch="false" />
+            <line number="66" hits="25" branch="false" />
+            <line number="67" hits="25" branch="false" />
+            <line number="68" hits="25" branch="false" />
+            <line number="71" hits="1" branch="false" />
+            <line number="72" hits="1" branch="true" condition-coverage="100% (2/2)" />
+            <line number="73" hits="1" branch="false" />
+            <line number="74" hits="1" branch="false" />
+            <line number="75" hits="1" branch="false" />
+            <line number="76" hits="1" branch="true" condition-coverage="100% (2/2)" />
+            <line number="77" hits="1" branch="false" />
+            <line number="78" hits="1" branch="false" />
+            <line number="79" hits="1" branch="false" />
+            <line number="80" hits="1" branch="true" condition-coverage="100% (2/2)" />
+            <line number="81" hits="1" branch="false" />
+            <line number="82" hits="1" branch="false" />
+            <line number="83" hits="1" branch="false" />
+            <line number="84" hits="1" branch="false" />
+            <line number="85" hits="1" branch="false" />
+            <line number="88" hits="1" branch="false" />
+            <line number="89" hits="1" branch="false" />
+            <line number="90" hits="1" branch="false" />
+            <line number="91" hits="1" branch="false" />
+            <line number="94" hits="1" branch="false" />
+            <line number="95" hits="1" branch="false" />
+            <line number="96" hits="1" branch="false" />
+            <line number="97" hits="1" branch="false" />
+            <line number="100" hits="3" branch="false" />
+            <line number="101" hits="3" branch="false" />
+            <line number="102" hits="3" branch="false" />
+            <line number="103" hits="3" branch="false" />
+            <line number="106" hits="2" branch="false" />
+            <line number="107" hits="2" branch="false" />
+            <line number="108" hits="2" branch="false" />
+            <line number="109" hits="2" branch="false" />
+            <line number="110" hits="2" branch="false" />
+            <line number="111" hits="2" branch="false" />
+            <line number="114" hits="2" branch="false" />
+            <line number="115" hits="2" branch="true" condition-coverage="100% (2/2)" />
+            <line number="116" hits="1" branch="false" />
+            <line number="117" hits="1" branch="false" />
+            <line number="119" hits="1" branch="false" />
+            <line number="120" hits="1" branch="false" />
+            <line number="121" hits="1" branch="false" />
+            <line number="124" hits="0" branch="false" />
+            <line number="125" hits="0" branch="false" />
+            <line number="126" hits="0" branch="false" />
+            <line number="127" hits="0" branch="false" />
+            <line number="128" hits="0" branch="false" />
+            <line number="131" hits="0" branch="false" />
+            <line number="132" hits="0" branch="false" />
+            <line number="133" hits="0" branch="false" />
+            <line number="134" hits="0" branch="false" />
+            <line number="135" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Domain.Entities.UserProfilePhoto" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Domain/Entities/UserProfilePhoto.cs" line-rate="0" branch-rate="0" complexity="7">
+          <methods>
+            <method name="Create" signature="(System.Guid,System.String,System.Int32,System.Int32,System.Byte[],System.DateTime)" line-rate="0" branch-rate="0" complexity="6">
+              <lines>
+                <line number="23" hits="0" branch="false" />
+                <line number="24" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="25" hits="0" branch="false" />
+                <line number="26" hits="0" branch="false" />
+                <line number="28" hits="0" branch="true" condition-coverage="0% (0/4)" />
+                <line number="29" hits="0" branch="false" />
+                <line number="30" hits="0" branch="false" />
+                <line number="32" hits="0" branch="false" />
+                <line number="33" hits="0" branch="false" />
+                <line number="34" hits="0" branch="false" />
+                <line number="35" hits="0" branch="false" />
+                <line number="36" hits="0" branch="false" />
+                <line number="37" hits="0" branch="false" />
+                <line number="38" hits="0" branch="false" />
+                <line number="39" hits="0" branch="false" />
+                <line number="40" hits="0" branch="false" />
+                <line number="41" hits="0" branch="false" />
+                <line number="42" hits="0" branch="false" />
+                <line number="43" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="0" branch="false" />
+            <line number="23" hits="0" branch="false" />
+            <line number="24" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="25" hits="0" branch="false" />
+            <line number="26" hits="0" branch="false" />
+            <line number="28" hits="0" branch="true" condition-coverage="0% (0/4)" />
+            <line number="29" hits="0" branch="false" />
+            <line number="30" hits="0" branch="false" />
+            <line number="32" hits="0" branch="false" />
+            <line number="33" hits="0" branch="false" />
+            <line number="34" hits="0" branch="false" />
+            <line number="35" hits="0" branch="false" />
+            <line number="36" hits="0" branch="false" />
+            <line number="37" hits="0" branch="false" />
+            <line number="38" hits="0" branch="false" />
+            <line number="39" hits="0" branch="false" />
+            <line number="40" hits="0" branch="false" />
+            <line number="41" hits="0" branch="false" />
+            <line number="42" hits="0" branch="false" />
+            <line number="43" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Domain.Services.CarryForwardCalculator" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Domain/Services/CarryForwardCalculator.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(ExpenseTracker.Domain.Abstractions.IEntryRepository,ExpenseTracker.Domain.Abstractions.IMonthlySummaryRepository,ExpenseTracker.Domain.Abstractions.IClock)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="7" branch="false" />
+                <line number="19" hits="7" branch="false" />
+                <line number="20" hits="7" branch="false" />
+                <line number="21" hits="7" branch="false" />
+                <line number="22" hits="7" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="18" hits="7" branch="false" />
+            <line number="19" hits="7" branch="false" />
+            <line number="20" hits="7" branch="false" />
+            <line number="21" hits="7" branch="false" />
+            <line number="22" hits="7" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Domain.Services.MonthlySummaryService" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Domain/Services/MonthlySummaryService.cs" line-rate="1" branch-rate="1" complexity="4">
+          <methods>
+            <method name="Compute" signature="(System.Decimal,System.Collections.Generic.IEnumerable`1&lt;ExpenseTracker.Domain.Entities.Entry&gt;)" line-rate="1" branch-rate="1" complexity="4">
+              <lines>
+                <line number="21" hits="17" branch="false" />
+                <line number="22" hits="34" branch="false" />
+                <line number="23" hits="95" branch="true" condition-coverage="100% (2/2)" />
+                <line number="24" hits="22" branch="false" />
+                <line number="25" hits="22" branch="true" condition-coverage="100% (2/2)" />
+                <line number="26" hits="12" branch="false" />
+                <line number="27" hits="12" branch="false" />
+                <line number="28" hits="12" branch="false" />
+                <line number="30" hits="10" branch="false" />
+                <line number="31" hits="10" branch="false" />
+                <line number="32" hits="10" branch="false" />
+                <line number="33" hits="22" branch="false" />
+                <line number="35" hits="17" branch="false" />
+                <line number="36" hits="17" branch="false" />
+                <line number="37" hits="17" branch="false" />
+                <line number="38" hits="17" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="17" branch="false" />
+            <line number="22" hits="34" branch="false" />
+            <line number="23" hits="95" branch="true" condition-coverage="100% (2/2)" />
+            <line number="24" hits="22" branch="false" />
+            <line number="25" hits="22" branch="true" condition-coverage="100% (2/2)" />
+            <line number="26" hits="12" branch="false" />
+            <line number="27" hits="12" branch="false" />
+            <line number="28" hits="12" branch="false" />
+            <line number="30" hits="10" branch="false" />
+            <line number="31" hits="10" branch="false" />
+            <line number="32" hits="10" branch="false" />
+            <line number="33" hits="22" branch="false" />
+            <line number="35" hits="17" branch="false" />
+            <line number="36" hits="17" branch="false" />
+            <line number="37" hits="17" branch="false" />
+            <line number="38" hits="17" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Domain.Services.SavingsRateClassifier" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Domain/Services/SavingsRateClassifier.cs" line-rate="1" branch-rate="1" complexity="10">
+          <methods>
+            <method name="Classify" signature="(System.Decimal,System.Decimal)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="12" hits="24" branch="false" />
+                <line number="13" hits="24" branch="true" condition-coverage="100% (2/2)" />
+                <line number="14" hits="8" branch="false" />
+                <line number="15" hits="8" branch="false" />
+                <line number="17" hits="16" branch="false" />
+                <line number="18" hits="16" branch="false" />
+                <line number="19" hits="24" branch="false" />
+              </lines>
+            </method>
+            <method name="ClassifyRate" signature="(System.Decimal)" line-rate="1" branch-rate="1" complexity="6">
+              <lines>
+                <line number="22" hits="16" branch="false" />
+                <line number="23" hits="16" branch="true" condition-coverage="100% (2/2)" />
+                <line number="24" hits="3" branch="false" />
+                <line number="25" hits="3" branch="false" />
+                <line number="27" hits="13" branch="true" condition-coverage="100% (2/2)" />
+                <line number="28" hits="2" branch="false" />
+                <line number="29" hits="2" branch="false" />
+                <line number="31" hits="11" branch="true" condition-coverage="100% (2/2)" />
+                <line number="32" hits="1" branch="false" />
+                <line number="33" hits="1" branch="false" />
+                <line number="35" hits="10" branch="false" />
+                <line number="36" hits="16" branch="false" />
+              </lines>
+            </method>
+            <method name="ComputeRate" signature="(System.Decimal,System.Decimal)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="39" hits="17" branch="false" />
+                <line number="40" hits="17" branch="true" condition-coverage="100% (2/2)" />
+                <line number="41" hits="7" branch="false" />
+                <line number="42" hits="7" branch="false" />
+                <line number="44" hits="10" branch="false" />
+                <line number="45" hits="17" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="24" branch="false" />
+            <line number="13" hits="24" branch="true" condition-coverage="100% (2/2)" />
+            <line number="14" hits="8" branch="false" />
+            <line number="15" hits="8" branch="false" />
+            <line number="17" hits="16" branch="false" />
+            <line number="18" hits="16" branch="false" />
+            <line number="19" hits="24" branch="false" />
+            <line number="22" hits="16" branch="false" />
+            <line number="23" hits="16" branch="true" condition-coverage="100% (2/2)" />
+            <line number="24" hits="3" branch="false" />
+            <line number="25" hits="3" branch="false" />
+            <line number="27" hits="13" branch="true" condition-coverage="100% (2/2)" />
+            <line number="28" hits="2" branch="false" />
+            <line number="29" hits="2" branch="false" />
+            <line number="31" hits="11" branch="true" condition-coverage="100% (2/2)" />
+            <line number="32" hits="1" branch="false" />
+            <line number="33" hits="1" branch="false" />
+            <line number="35" hits="10" branch="false" />
+            <line number="36" hits="16" branch="false" />
+            <line number="39" hits="17" branch="false" />
+            <line number="40" hits="17" branch="true" condition-coverage="100% (2/2)" />
+            <line number="41" hits="7" branch="false" />
+            <line number="42" hits="7" branch="false" />
+            <line number="44" hits="10" branch="false" />
+            <line number="45" hits="17" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Domain.ValueObjects.EmailAddress" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Domain/ValueObjects/EmailAddress.cs" line-rate="0.47368421052631576" branch-rate="1" complexity="7">
+          <methods>
+            <method name="Parse" signature="(System.String)" line-rate="1" branch-rate="1" complexity="4">
+              <lines>
+                <line number="16" hits="5" branch="false" />
+                <line number="17" hits="5" branch="true" condition-coverage="100% (4/4)" />
+                <line number="18" hits="3" branch="false" />
+                <line number="19" hits="3" branch="false" />
+                <line number="22" hits="2" branch="false" />
+                <line number="23" hits="2" branch="false" />
+              </lines>
+            </method>
+            <method name="TryParse" signature="(System.String,ExpenseTracker.Domain.ValueObjects.EmailAddress&amp;)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="26" hits="0" branch="false" />
+                <line number="28" hits="0" branch="false" />
+                <line number="29" hits="0" branch="false" />
+                <line number="30" hits="0" branch="false" />
+                <line number="32" hits="0" branch="false" />
+                <line number="33" hits="0" branch="false" />
+                <line number="34" hits="0" branch="false" />
+                <line number="35" hits="0" branch="false" />
+                <line number="37" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="ToString" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="39" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name=".cctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="1" branch="false" />
+                <line number="8" hits="1" branch="false" />
+                <line number="9" hits="1" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="1" branch="false" />
+            <line number="8" hits="1" branch="false" />
+            <line number="9" hits="1" branch="false" />
+            <line number="16" hits="5" branch="false" />
+            <line number="17" hits="5" branch="true" condition-coverage="100% (4/4)" />
+            <line number="18" hits="3" branch="false" />
+            <line number="19" hits="3" branch="false" />
+            <line number="22" hits="2" branch="false" />
+            <line number="23" hits="2" branch="false" />
+            <line number="26" hits="0" branch="false" />
+            <line number="28" hits="0" branch="false" />
+            <line number="29" hits="0" branch="false" />
+            <line number="30" hits="0" branch="false" />
+            <line number="32" hits="0" branch="false" />
+            <line number="33" hits="0" branch="false" />
+            <line number="34" hits="0" branch="false" />
+            <line number="35" hits="0" branch="false" />
+            <line number="37" hits="0" branch="false" />
+            <line number="39" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Domain.ValueObjects.Money" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Domain/ValueObjects/Money.cs" line-rate="0" branch-rate="0" complexity="5">
+          <methods>
+            <method name="Zero" signature="(System.String)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="Add" signature="(ExpenseTracker.Domain.ValueObjects.Money)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="false" />
+                <line number="9" hits="0" branch="false" />
+                <line number="10" hits="0" branch="false" />
+                <line number="11" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="Subtract" signature="(ExpenseTracker.Domain.ValueObjects.Money)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="0" branch="false" />
+                <line number="15" hits="0" branch="false" />
+                <line number="16" hits="0" branch="false" />
+                <line number="17" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="EnsureSameCurrency" signature="(ExpenseTracker.Domain.ValueObjects.Money)" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="20" hits="0" branch="false" />
+                <line number="21" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="22" hits="0" branch="false" />
+                <line number="23" hits="0" branch="false" />
+                <line number="24" hits="0" branch="false" />
+                <line number="26" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="0" branch="false" />
+            <line number="8" hits="0" branch="false" />
+            <line number="9" hits="0" branch="false" />
+            <line number="10" hits="0" branch="false" />
+            <line number="11" hits="0" branch="false" />
+            <line number="14" hits="0" branch="false" />
+            <line number="15" hits="0" branch="false" />
+            <line number="16" hits="0" branch="false" />
+            <line number="17" hits="0" branch="false" />
+            <line number="20" hits="0" branch="false" />
+            <line number="21" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="22" hits="0" branch="false" />
+            <line number="23" hits="0" branch="false" />
+            <line number="24" hits="0" branch="false" />
+            <line number="26" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Domain.ValueObjects.MonthYear" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Domain/ValueObjects/MonthYear.cs" line-rate="0.6666666666666666" branch-rate="0.6923076923076923" complexity="20">
+          <methods>
+            <method name="From" signature="(System.DateTime)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="24" hits="5" branch="false" />
+              </lines>
+            </method>
+            <method name="From" signature="(System.DateOnly)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="26" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="Next" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="29" hits="5" branch="true" condition-coverage="100% (2/2)" />
+              </lines>
+            </method>
+            <method name="Previous" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="32" hits="17" branch="true" condition-coverage="100% (2/2)" />
+              </lines>
+            </method>
+            <method name="CompareTo" signature="(ExpenseTracker.Domain.ValueObjects.MonthYear)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="35" hits="49" branch="false" />
+                <line number="36" hits="49" branch="false" />
+                <line number="37" hits="49" branch="true" condition-coverage="100% (2/2)" />
+                <line number="38" hits="49" branch="false" />
+              </lines>
+            </method>
+            <method name="op_LessThan" signature="(ExpenseTracker.Domain.ValueObjects.MonthYear,ExpenseTracker.Domain.ValueObjects.MonthYear)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="40" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="op_GreaterThan" signature="(ExpenseTracker.Domain.ValueObjects.MonthYear,ExpenseTracker.Domain.ValueObjects.MonthYear)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="41" hits="36" branch="false" />
+              </lines>
+            </method>
+            <method name="op_LessThanOrEqual" signature="(ExpenseTracker.Domain.ValueObjects.MonthYear,ExpenseTracker.Domain.ValueObjects.MonthYear)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="42" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="op_GreaterThanOrEqual" signature="(ExpenseTracker.Domain.ValueObjects.MonthYear,ExpenseTracker.Domain.ValueObjects.MonthYear)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="43" hits="12" branch="false" />
+              </lines>
+            </method>
+            <method name="ToString" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="45" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Int32,System.Int32)" line-rate="0.5" branch-rate="0.42857142857142855" complexity="7">
+              <lines>
+                <line number="9" hits="95" branch="false" />
+                <line number="10" hits="95" branch="true" condition-coverage="50% (2/4)" />
+                <line number="11" hits="0" branch="false" />
+                <line number="12" hits="0" branch="false" />
+                <line number="15" hits="95" branch="true" condition-coverage="33% (1/3)" />
+                <line number="16" hits="0" branch="false" />
+                <line number="17" hits="0" branch="false" />
+                <line number="22" hits="95" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="95" branch="false" />
+            <line number="10" hits="95" branch="true" condition-coverage="50% (2/4)" />
+            <line number="11" hits="0" branch="false" />
+            <line number="12" hits="0" branch="false" />
+            <line number="15" hits="95" branch="true" condition-coverage="33% (1/3)" />
+            <line number="16" hits="0" branch="false" />
+            <line number="17" hits="0" branch="false" />
+            <line number="22" hits="95" branch="false" />
+            <line number="24" hits="5" branch="false" />
+            <line number="26" hits="0" branch="false" />
+            <line number="29" hits="5" branch="true" condition-coverage="100% (2/2)" />
+            <line number="32" hits="17" branch="true" condition-coverage="100% (2/2)" />
+            <line number="35" hits="49" branch="false" />
+            <line number="36" hits="49" branch="false" />
+            <line number="37" hits="49" branch="true" condition-coverage="100% (2/2)" />
+            <line number="38" hits="49" branch="false" />
+            <line number="40" hits="1" branch="false" />
+            <line number="41" hits="36" branch="false" />
+            <line number="42" hits="0" branch="false" />
+            <line number="43" hits="12" branch="false" />
+            <line number="45" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="ExpenseTracker.Domain.ValueObjects.PhoneNumber" filename="/Users/niladri/Microsoft/Core/ExpenseTracker/backend/src/ExpenseTracker.Domain/ValueObjects/PhoneNumber.cs" line-rate="0.5238095238095238" branch-rate="1" complexity="7">
+          <methods>
+            <method name="Parse" signature="(System.String)" line-rate="1" branch-rate="1" complexity="4">
+              <lines>
+                <line number="15" hits="5" branch="false" />
+                <line number="16" hits="5" branch="true" condition-coverage="100% (2/2)" />
+                <line number="17" hits="1" branch="false" />
+                <line number="18" hits="1" branch="false" />
+                <line number="21" hits="4" branch="false" />
+                <line number="22" hits="4" branch="true" condition-coverage="100% (2/2)" />
+                <line number="23" hits="2" branch="false" />
+                <line number="24" hits="2" branch="false" />
+                <line number="27" hits="2" branch="false" />
+                <line number="28" hits="2" branch="false" />
+              </lines>
+            </method>
+            <method name="TryParse" signature="(System.String,ExpenseTracker.Domain.ValueObjects.PhoneNumber&amp;)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="31" hits="0" branch="false" />
+                <line number="33" hits="0" branch="false" />
+                <line number="34" hits="0" branch="false" />
+                <line number="35" hits="0" branch="false" />
+                <line number="37" hits="0" branch="false" />
+                <line number="38" hits="0" branch="false" />
+                <line number="39" hits="0" branch="false" />
+                <line number="40" hits="0" branch="false" />
+                <line number="42" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="ToString" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="44" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name=".cctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="1" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="1" branch="false" />
+            <line number="15" hits="5" branch="false" />
+            <line number="16" hits="5" branch="true" condition-coverage="100% (2/2)" />
+            <line number="17" hits="1" branch="false" />
+            <line number="18" hits="1" branch="false" />
+            <line number="21" hits="4" branch="false" />
+            <line number="22" hits="4" branch="true" condition-coverage="100% (2/2)" />
+            <line number="23" hits="2" branch="false" />
+            <line number="24" hits="2" branch="false" />
+            <line number="27" hits="2" branch="false" />
+            <line number="28" hits="2" branch="false" />
+            <line number="31" hits="0" branch="false" />
+            <line number="33" hits="0" branch="false" />
+            <line number="34" hits="0" branch="false" />
+            <line number="35" hits="0" branch="false" />
+            <line number="37" hits="0" branch="false" />
+            <line number="38" hits="0" branch="false" />
+            <line number="39" hits="0" branch="false" />
+            <line number="40" hits="0" branch="false" />
+            <line number="42" hits="0" branch="false" />
+            <line number="44" hits="0" branch="false" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>
