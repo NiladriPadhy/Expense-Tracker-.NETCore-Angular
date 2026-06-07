@@ -1,0 +1,44 @@
+# macOS / Editor noise
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+.vscode/*.log
+
+# .NET
+backend/**/bin/
+backend/**/obj/
+backend/**/*.user
+backend/**/*.suo
+backend/**/TestResults/
+backend/.idea/
+**/.vs/
+**/coverage/
+**/coverage.*
+
+# EF Core local DB
+backend/**/*.db
+backend/**/*.db-shm
+backend/**/*.db-wal
+
+# Node / Angular
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+frontend/coverage/
+frontend/.nyc_output/
+*.log
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+appsettings.Local.json
+appsettings.*.local.json
+
+# OS dumps
+**/Desktop.ini
+
+# Temp
+*.bak
+*.orig
